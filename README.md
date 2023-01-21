@@ -1,5 +1,7 @@
 # *états.*
-The State Travel Ranker
+>travel and relocation preference ranking
+
+![Father travelling with kids](https://user-images.githubusercontent.com/24633211/213829029-8bf1dccf-1b26-4fd4-b063-ad7d9981dbff.jpg)
 
 ## Project Overview
 The problem that my project solves is to streamline the process of choosing locations (States) in which to travel or potentially relocate.  States are ranked based upon several desirable categories and that ranking is weighted by the user based upon number of matches to said categories.
