@@ -1,9 +1,10 @@
-from api.models import Api
+from rest_framework import serializers
+from api.models import State
 
 
 class ApiSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Api
+        model = State
         fields = (
             'id',
             'state_name',

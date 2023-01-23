@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import Api
+from .models import State
 
-admin.site.register(Api)
+admin.site.register(State)
