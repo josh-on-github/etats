@@ -35,8 +35,6 @@ The problem that my project solves is to streamline the process of choosing loca
 
 ## Data Model
 - `id` for element index
-- `user` for username
-- `password` for user's password
 - `state_name` for state name abbreviation
 - `tax_rate` for state effective tax burden
 - `tax_rank` for state rank by `tax_rate`
@@ -61,5 +59,3 @@ The problem that my project solves is to streamline the process of choosing loca
 **Days 11 - 15:**  Style project with Bootstrap and CSS.
 
 **_Milestone # 3_** is a fully-functional web app for the user to interact with that has pretty styling.
-
-**Day 16+:**  Deploy web/mobile app.
