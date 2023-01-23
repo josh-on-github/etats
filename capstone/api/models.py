@@ -1,4 +1,4 @@
 from django.db import models
 
-class Api(models.Model):
-    
+class State(models.Model):
+    state_name = models.CharField(max_length=2)
