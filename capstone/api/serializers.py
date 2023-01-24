@@ -6,7 +6,6 @@ class ApiSerializer(serializers.ModelSerializer):
     class Meta:
         model = State
         fields = (
-            'id',
             'state_name',
             'tax_rate',
             'tax_rank',
