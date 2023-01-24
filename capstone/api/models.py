@@ -9,4 +9,6 @@ class State(models.Model):
     home_rank = models.SmallIntegerField(null=True)
     crime_rate = models.DecimalField(max_digits=7, decimal_places=3, null=True)
     crime_rank = models.SmallIntegerField(null=True)
-    weighted_rank = models.SmallIntegerField(null=True)
+
+
+    # weighted_rank = models.SmallIntegerField(null=True)
