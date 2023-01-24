@@ -27,14 +27,14 @@ with urlopen('https://taxfoundation.org/tax-burden-by-state-2022/#results') as r
     soup_tax = BeautifulSoup(response, 'html.parser')   # parses HTML data from webpage listed above
 
 # Opens JSON files to access state data
-politics_json = 'capstone\api\static\api\politics.json'
+politics_json = r'api\static\api\politics.json'
 with open(politics_json, 'r') as file:
     politics_list = json.load(file)
 
-homes_json = 'capstone\api\static\api\homes.json'
+homes_json = r'api\static\api\homes.json'
 with open(homes_json, 'r') as file:
     homes_list = json.load(file)
 
-crime_json = 'capstone\api\static\api\crime.json'
+crime_json = r'api\static\api\crime.json'
 with open(crime_json, 'r') as file:
     crime_list = json.load(file)
