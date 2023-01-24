@@ -50,24 +50,27 @@ def tax_burden(): # Returns state, tax_rate, and data based upon user input for 
             home_rank = None,
             crime_rate = None,
             crime_rank = None,
+            weighted_rank = None,
         )
         
 
 def politics():   # Returns state and political party control of that state based upon user input for either state or political party
+    state_object = State.objects.all()
     for item in politics_list:  # loops data from selected JSON array of objects
-        State.state_name = item['state']    # stores key from JSON file (file returns 'state' as 'ï»¿state')
-        State.political_affiliation = item['control']
-    
+        if item['state'] == state_object.state_name:
+            state_object.political_affiliation = item['control']
 
 def homes():  # Returns state and median home price based upon user input for either state or price
+    state_object = State.objects.all()
     for item in homes_list:
-        State.state_name = item['state']
-        State.median_home_value = item['MedianValue']
-        State.home_rank = item['fips']
+        if item['state'] == state_object.state_name:
+            state_object.median_home_value = item['MedianValue']
+            state_object.home_rank = item['fips']
         
 
 def crime():  # Returns state(s) and crime rate (violent/property) based upon user input for either state or crime rate per 100k people
+    state_object = State.objects.all()
     for item in crime_list:
-        State.state_name = item['state']
-        State.crime_rate = item['rate']
-        State.crime_rank = item['fips']
+        if item['state'] == state_object.state_name:
+            state_object.crime_rate = item['rate']
+            state_object.crime_rank = item['fips']
