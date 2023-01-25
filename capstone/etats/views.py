@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import State
+from .models import Rank
 
 def index(request):
-    print(State.objects.all())
+    print(Rank.objects.all())
     return HttpResponse("Hello, world")
