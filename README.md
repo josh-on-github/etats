@@ -19,7 +19,7 @@ The problem that my project solves is to streamline the process of choosing loca
 - State Effective Tax Burden
 - State Violent/Property Crime Rate
 - State Median Housing Value/Price 
-- State Policital Affiliation
+- State Political Affiliation
 - Weighted State Ranking
 
 ### Essential Features
