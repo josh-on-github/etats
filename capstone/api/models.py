@@ -9,7 +9,7 @@ class State(models.Model):
     home_rank = models.SmallIntegerField(null=True)
     crime_rate = models.DecimalField(max_digits=7, decimal_places=3, null=True)
     crime_rank = models.SmallIntegerField(null=True)
-    weighted_rank = models.SmallIntegerField(null=True)
+    # weighted_rank = models.SmallIntegerField(null=True)
 
     def __str__(self):
         return f'''
@@ -21,5 +21,5 @@ class State(models.Model):
         Home Price Rank: {self.home_rank}
         Crime Rate: {self.crime_rate}
         Crime Rank: {self.crime_rank}
-        Weighted Rank: {self.weighted_rank}
         '''
+        # Weighted Rank: {self.weighted_rank}

@@ -1,6 +1,6 @@
 import json
 # import requests
-from csv import DictReader
+# from csv import DictReader
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 from rest_framework import generics
@@ -39,7 +39,7 @@ class StateView(generics.RetrieveUpdateDestroyAPIView):
 
 
 
-def tax_burden(): # Returns state, tax_rate, and data based upon user input for either state or rank
+def tax_burden(): # Assigns state name, tax rate, and tax rank to model fields
     for row in soup_tax.table.contents[5].find_all('tr'):   # loops selected table data in parse tree
         State.objects.create(
             state_name = row.contents[1].string,
@@ -50,15 +50,23 @@ def tax_burden(): # Returns state, tax_rate, and data based upon user input for 
             home_rank = None,
             crime_rate = None,
             crime_rank = None,
-            weighted_rank = None,
         )
-        
 
-def politics():   # Returns state and political party control of that state based upon user input for either state or political party
-    state_object = State.objects.all()
-    for item in politics_list:  # loops data from selected JSON array of objects
-        if item['state'] == state_object.state_name:
-            state_object.political_affiliation = item['control']
+
+# print(State.objects.all())
+
+# def politics():   # Assigns political party control of states when state names match object above
+#     for item in politics_list:  # loops data from selected JSON array of objects
+#         state_object = State.objects.filter(state_name=item['state'])
+        # if item['state'] == state_object['state_name']:
+            
+        #     state_object.political_affiliation = item['control']
+
+        # if State.objects.filter(state_name=item['state']) == True:
+        #     State.objects.filter(political_affiliation=item['control'])
+
+        #     State.objects.filter(state_name)
+
 
 def homes():  # Returns state and median home price based upon user input for either state or price
     state_object = State.objects.all()

@@ -14,5 +14,5 @@ class ApiSerializer(serializers.ModelSerializer):
             'home_rank',
             'crime_rate',
             'crime_rank', 
-            'weighted_rank',
+            # 'weighted_rank',
         )
