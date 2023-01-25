@@ -1,256 +1,201 @@
 [
   {
-    "fips": "54",
     "state": "West Virginia",
     "MedianValue": 123200
   },
   {
-    "fips": "28",
     "state": "Mississippi",
     "MedianValue": 125500
   },
   {
-    "fips": "5",
     "state": "Arkansas",
     "MedianValue": 133600
   },
   {
-    "fips": "40",
     "state": "Oklahoma",
     "MedianValue": 142400
   },
   {
-    "fips": "21",
     "state": "Kentucky",
     "MedianValue": 147100
   },
   {
-    "fips": "18",
     "state": "Indiana",
     "MedianValue": 148900
   },
   {
-    "fips": "1",
     "state": "Alabama",
     "MedianValue": 149600
   },
   {
-    "fips": "39",
     "state": "Ohio",
     "MedianValue": 151400
   },
   {
-    "fips": "19",
     "state": "Iowa",
     "MedianValue": 153900
   },
   {
-    "fips": "20",
     "state": "Kansas",
     "MedianValue": 157600
   },
   {
-    "fips": "26",
     "state": "Michigan",
     "MedianValue": 162600
   },
   {
-    "fips": "29",
     "state": "Missouri",
     "MedianValue": 163600
   },
   {
-    "fips": "31",
     "state": "Nebraska",
     "MedianValue": 164000
   },
   {
-    "fips": "22",
     "state": "Louisiana",
     "MedianValue": 168100
   },
   {
-    "fips": "45",
     "state": "South Carolina",
     "MedianValue": 170100
   },
   {
-    "fips": "46",
     "state": "South Dakota",
     "MedianValue": 174600
   },
   {
-    "fips": "35",
     "state": "New Mexico",
     "MedianValue": 175700
   },
   {
-    "fips": "47",
     "state": "Tennessee",
     "MedianValue": 177600
   },
   {
-    "fips": "37",
     "state": "North Carolina",
     "MedianValue": 182100
   },
   {
-    "fips": "48",
     "state": "Texas",
     "MedianValue": 187200
   },
   {
-    "fips": "42",
     "state": "Pennsylvania",
     "MedianValue": 187500
   },
   {
-    "fips": "55",
     "state": "Wisconsin",
     "MedianValue": 189200
   },
   {
-    "fips": "13",
     "state": "Georgia",
     "MedianValue": 190200
   },
   {
-    "fips": "23",
     "state": "Maine",
     "MedianValue": 198000
   },
   {
-    "fips": "38",
     "state": "North Dakota",
     "MedianValue": 199900
   },
   {
-    "fips": "17",
     "state": "Illinois",
     "MedianValue": 202100
   },
   {
-    "fips": "56",
     "state": "Wyoming",
     "MedianValue": 228000
   },
   {
-    "fips": "50",
     "state": "Vermont",
     "MedianValue": 230900
   },
   {
-    "fips": "12",
     "state": "Florida",
     "MedianValue": 232000
   },
   {
-    "fips": "16",
     "state": "Idaho",
     "MedianValue": 235600
   },
   {
-    "fips": "27",
     "state": "Minnesota",
     "MedianValue": 235700
   },
   {
-    "fips": "4",
     "state": "Arizona",
     "MedianValue": 242000
   },
   {
-    "fips": "30",
     "state": "Montana",
     "MedianValue": 244900
   },
   {
-    "fips": "10",
     "state": "Delaware",
     "MedianValue": 258300
   },
   {
-    "fips": "33",
     "state": "New Hampshire",
     "MedianValue": 272300
   },
   {
-    "fips": "2",
     "state": "Alaska",
     "MedianValue": 275600
   },
   {
-    "fips": "44",
     "state": "Rhode Island",
     "MedianValue": 276600
   },
   {
-    "fips": "9",
     "state": "Connecticut",
     "MedianValue": 279700
   },
   {
-    "fips": "51",
     "state": "Virginia",
     "MedianValue": 282800
   },
   {
-    "fips": "32",
     "state": "Nevada",
     "MedianValue": 290200
   },
   {
-    "fips": "49",
     "state": "Utah",
     "MedianValue": 305400
   },
   {
-    "fips": "36",
     "state": "New York",
     "MedianValue": 325000
   },
   {
-    "fips": "24",
     "state": "Maryland",
     "MedianValue": 325400
   },
   {
-    "fips": "41",
     "state": "Oregon",
     "MedianValue": 336700
   },
   {
-    "fips": "34",
     "state": "New Jersey",
     "MedianValue": 343500
   },
   {
-    "fips": "53",
     "state": "Washington",
     "MedianValue": 366800
   },
   {
-    "fips": "8",
     "state": "Colorado",
     "MedianValue": 369900
   },
   {
-    "fips": "25",
     "state": "Massachusetts",
     "MedianValue": 398800
   },
   {
-    "fips": "6",
     "state": "California",
     "MedianValue": 538500
   },
   {
-    "fips": "11",
-    "state": "District of Columbia",
-    "MedianValue": 618100
-  },
-  {
-    "fips": "15",
     "state": "Hawaii",
     "MedianValue": 636400
   }

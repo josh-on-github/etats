@@ -20,11 +20,11 @@ class Migration(migrations.Migration):
             name='crime_rate',
             field=models.DecimalField(decimal_places=3, max_digits=7, null=True),
         ),
-        migrations.AddField(
-            model_name='state',
-            name='home_rank',
-            field=models.SmallIntegerField(null=True),
-        ),
+        # migrations.AddField(
+        #     model_name='state',
+        #     name='home_rank',
+        #     field=models.SmallIntegerField(null=True),
+        # ),
         migrations.AddField(
             model_name='state',
             name='median_home_value',

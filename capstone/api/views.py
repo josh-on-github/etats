@@ -47,7 +47,7 @@ def tax_burden(): # Assigns state name, tax rate, and tax rank to model fields
             tax_rank = row.contents[5].string, # stores string of state rank (1 is lowest tax rate) from table
             political_affiliation = None,
             median_home_value = None,
-            home_rank = None,
+            # home_rank = None,
             crime_rate = None,
             crime_rank = None,
         )

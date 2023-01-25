@@ -1,256 +1,201 @@
 [
   {
-    "fips": "11",
-    "state": "District of Columbia",
-    "rate": 7985.932
-  },
-  {
-    "fips": "35",
     "state": "New Mexico",
     "rate": 6462.032
   },
   {
-    "fips": "22",
     "state": "Louisiana",
     "rate": 6408.216
   },
   {
-    "fips": "8",
     "state": "Colorado",
     "rate": 6090.756
   },
   {
-    "fips": "45",
     "state": "South Carolina",
     "rate": 5972.837
   },
   {
-    "fips": "5",
     "state": "Arkansas",
     "rate": 5898.753
   },
   {
-    "fips": "40",
     "state": "Oklahoma",
     "rate": 5869.825
   },
   {
-    "fips": "53",
     "state": "Washington",
     "rate": 5758.57
   },
   {
-    "fips": "47",
     "state": "Tennessee",
     "rate": 5658.304
   },
   {
-    "fips": "41",
     "state": "Oregon",
     "rate": 5609.893
   },
   {
-    "fips": "29",
     "state": "Missouri",
     "rate": 5604.784
   },
   {
-    "fips": "2",
     "state": "Alaska",
     "rate": 5358.896
   },
   {
-    "fips": "49",
     "state": "Utah",
     "rate": 5189.516
   },
   {
-    "fips": "15",
     "state": "Hawaii",
     "rate": 5076.88
   },
   {
-    "fips": "4",
     "state": "Arizona",
     "rate": 4940.118
   },
   {
-    "fips": "48",
     "state": "Texas",
     "rate": 4936.535
   },
   {
-    "fips": "37",
     "state": "North Carolina",
     "rate": 4872.292
   },
   {
-    "fips": "20",
     "state": "Kansas",
     "rate": 4823.212
   },
   {
-    "fips": "1",
     "state": "Alabama",
     "rate": 4727.065
   },
   {
-    "fips": "6",
     "state": "California",
     "rate": 4719.9
   },
   {
-    "fips": "30",
     "state": "Montana",
     "rate": 4711.464
   },
   {
-    "fips": "38",
     "state": "North Dakota",
     "rate": 4577.236
   },
   {
-    "fips": "27",
     "state": "Minnesota",
     "rate": 4527.25
   },
   {
-    "fips": "28",
     "state": "Mississippi",
     "rate": 4494.426
   },
   {
-    "fips": "46",
     "state": "South Dakota",
     "rate": 4414.837
   },
   {
-    "fips": "13",
     "state": "Georgia",
     "rate": 4414.802
   },
   {
-    "fips": "10",
     "state": "Delaware",
     "rate": 4354.642
   },
   {
-    "fips": "32",
     "state": "Nevada",
     "rate": 4313.506
   },
   {
-    "fips": "31",
     "state": "Nebraska",
     "rate": 4152.405
   },
   {
-    "fips": "39",
     "state": "Ohio",
     "rate": 4009.418
   },
   {
-    "fips": "18",
     "state": "Indiana",
     "rate": 3924.039
   },
   {
-    "fips": "12",
     "state": "Florida",
     "rate": 3922.458
   },
   {
-    "fips": "21",
     "state": "Kentucky",
     "rate": 3818.102
   },
   {
-    "fips": "19",
     "state": "Iowa",
     "rate": 3699.976
   },
   {
-    "fips": "42",
     "state": "Pennsylvania",
     "rate": 3677.679
   },
   {
-    "fips": "24",
     "state": "Maryland",
     "rate": 3619.488
   },
   {
-    "fips": "17",
     "state": "Illinois",
     "rate": 3544.667
   },
   {
-    "fips": "56",
     "state": "Wyoming",
     "rate": 3455.441
   },
   {
-    "fips": "9",
     "state": "Connecticut",
     "rate": 3311.746
   },
   {
-    "fips": "55",
     "state": "Wisconsin",
     "rate": 3294.709
   },
   {
-    "fips": "26",
     "state": "Michigan",
     "rate": 3199.772
   },
   {
-    "fips": "36",
     "state": "New York",
     "rate": 3185.2
   },
   {
-    "fips": "54",
     "state": "West Virginia",
     "rate": 3154.662
   },
   {
-    "fips": "51",
     "state": "Virginia",
     "rate": 3121.483
   },
   {
-    "fips": "44",
     "state": "Rhode Island",
     "rate": 2721.722
   },
   {
-    "fips": "50",
     "state": "Vermont",
     "rate": 2607.376
   },
   {
-    "fips": "34",
     "state": "New Jersey",
     "rate": 2511.751
   },
   {
-    "fips": "16",
     "state": "Idaho",
     "rate": 2466.346
   },
   {
-    "fips": "23",
     "state": "Maine",
     "rate": 2420.932
   },
   {
-    "fips": "25",
     "state": "Massachusetts",
     "rate": 2415.177
   },
   {
-    "fips": "33",
     "state": "New Hampshire",
     "rate": 2344.184
   }
