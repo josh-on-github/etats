@@ -33,16 +33,19 @@ The problem that my project solves is to streamline the process of choosing loca
 - User can send saved info via text/email
 - User can learn more info about states by linking to official state/state travel websites.
 
-## Data Model
+## Data Models
+
+### State Model
 - `id` for element index
 - `state_name` for state name abbreviation
 - `tax_rate` for state effective tax burden
 - `tax_rank` for state rank by `tax_rate`
 - `political_affiliation` for state political affiliation by party of registered voters, legislative majority, and executive branch
 - `median_home_value` for state median home value
-- `home_rank` for state rank by `median_home_value`
 - `crime_rate` for state violent/property crime rate by number of incidents per 100,000 people
 - `crime_rank` for state rank by `crime_rate`
+
+### Rank Model
 - `weighted_rank` for state rank weighted by number of user matches: <sup>`tax_rate`, `political_affiliation`, `median_home_value`, and `crime_rate`</sup>
 
 ## Schedule
@@ -52,10 +55,10 @@ The problem that my project solves is to streamline the process of choosing loca
 
 **_Milestone # 1_** is an MVP which makes API calls to return data from JSON files, parsed HTML from Beautiful Soup, and a web app that the user can use to CRUD data.
 
-**Days 6-8:**  Build templates and add JavaScript functions and events.
+**Days 6-9:**  Build templates and add JavaScript functions and events.
 
 **_Milestone # 2_** is an MVP for the user to interact with a fully-functional, albeit ugly, web app. 
 
-**Days 11 - 15:**  Style project with Bootstrap and CSS.
+**Days 10 - 15:**  Style project with Bootstrap and CSS.
 
 **_Milestone # 3_** is a fully-functional web app for the user to interact with that has pretty styling.
