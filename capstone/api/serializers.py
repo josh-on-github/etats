@@ -11,8 +11,6 @@ class ApiSerializer(serializers.ModelSerializer):
             'tax_rank',
             'political_affiliation',
             'median_home_value',
-            # 'home_rank',
             'crime_rate',
             'crime_rank', 
-            # 'weighted_rank',
         )

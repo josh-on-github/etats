@@ -6,10 +6,8 @@ class State(models.Model):
     tax_rank = models.SmallIntegerField(null=True)
     political_affiliation = models.CharField(max_length=15, null=True)
     median_home_value = models.SmallIntegerField(null=True)
-    # home_rank = models.SmallIntegerField(null=True)
     crime_rate = models.DecimalField(max_digits=7, decimal_places=3, null=True)
     crime_rank = models.SmallIntegerField(null=True)
-    # weighted_rank = models.SmallIntegerField(null=True)
 
     def __str__(self):
         return f'''
@@ -21,5 +19,3 @@ class State(models.Model):
         Crime Rate: {self.crime_rate}
         Crime Rank: {self.crime_rank}
         '''
-        # Home Price Rank: {self.home_rank}
-        # Weighted Rank: {self.weighted_rank}
