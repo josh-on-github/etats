@@ -19,4 +19,3 @@ class State(models.Model):
         Crime Rate: {round(self.crime_rate)} per 100,000
         Crime Rank: {self.crime_rank}
         '''
-        # Median Home Price: ${str(self.median_home_value / 1000).replace('.', ',')}
