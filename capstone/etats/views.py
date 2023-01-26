@@ -13,9 +13,8 @@ def index(request):
         for item in form_data:
             if item != 'csrfmiddlewaretoken' and form_data[item] != '':
                 print(form_data[item])
-                state_object = State.objects.filter(**{item: form_data[item]})  ### need to fix item to state model field ###
-                print(state_object)# state_object = State.objects.filter(item)
-                # state_object = State.objects.all().order_by('state_name').values()
+                state_object = State.objects.filter(**{item: form_data[item]})
+                print(state_object)
         # rank_object = Rank.objects.create(
         #     state_name=form_data['state_name'], 
         #     weighted_rank=form_data['weighted_rank'],
@@ -27,8 +26,3 @@ def index(request):
         rank_list = Rank.objects.all()
         context = {'rank_list': rank_list}
         return render(request, 'etats/index.html', context)
-
-
-# def index(request):
-#     print(Rank.objects.all())
-#     return HttpResponse("Hello, world")
