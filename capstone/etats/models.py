@@ -7,4 +7,4 @@ class Rank(models.Model):
     weighted_rank = models.SmallIntegerField(null=True)
         
     def __str__ (self):
-        return self.state_name
+        return self.state_name, self.weighted_rank
