@@ -51,9 +51,9 @@ The problem that my project solves is to streamline the process of choosing loca
 ## Schedule
 **Day 1:**  Present capstone proposal to instructor and start Django project/apps.
 
-**Days 2 - 5:**  Write Django models and views for different apps, including API(s), updating Python from mini-capstone.
+**Days 2 - 5:**  Write Django models and views for different apps, including API, updating Python from mini-capstone.
 
-**_Milestone # 1_** is an MVP which makes API calls to return data from JSON files, parsed HTML from Beautiful Soup, and a web app that the user can use to CRUD data.
+**_Milestone # 1_** is an MVP which makes API calls to retrieve and return state data based upon user input from a web app.
 
 **Days 6-9:**  Build templates and add JavaScript functions and events.
 
