@@ -1,0 +1,206 @@
+[
+  {
+    "state": "Alabama",
+    "control": "Republican"
+  },
+  {
+    "state": "Alaska",
+    "control": "Republican"
+  },
+  {
+    "state": "Arizona",
+    "control": "Republican"
+  },
+  {
+    "state": "Arkansas",
+    "control": "Republican"
+  },
+  {
+    "state": "California",
+    "control": "Democrat"
+  },
+  {
+    "state": "Colorado",
+    "control": "Democrat"
+  },
+  {
+    "state": "Connecticut",
+    "control": "Democrat"
+  },
+  {
+    "state": "Delaware",
+    "control": "Democrat"
+  },
+  {
+    "state": "District of Columbia",
+    "control": "Democrat"
+  },
+  {
+    "state": "Florida",
+    "control": "Republican"
+  },
+  {
+    "state": "Georgia",
+    "control": "Republican"
+  },
+  {
+    "state": "Hawaii",
+    "control": "Democrat"
+  },
+  {
+    "state": "Idaho",
+    "control": "Republican"
+  },
+  {
+    "state": "Illinois",
+    "control": "Democrat"
+  },
+  {
+    "state": "Indiana",
+    "control": "Republican"
+  },
+  {
+    "state": "Iowa",
+    "control": "Republican"
+  },
+  {
+    "state": "Kansas",
+    "control": "Split"
+  },
+  {
+    "state": "Kentucky",
+    "control": "Split"
+  },
+  {
+    "state": "Louisiana",
+    "control": "Split"
+  },
+  {
+    "state": "Maine",
+    "control": "Democrat"
+  },
+  {
+    "state": "Maryland",
+    "control": "Split"
+  },
+  {
+    "state": "Massachusetts",
+    "control": "Split"
+  },
+  {
+    "state": "Michigan",
+    "control": "Split"
+  },
+  {
+    "state": "Minnesota",
+    "control": "Split"
+  },
+  {
+    "state": "Mississippi",
+    "control": "Republican"
+  },
+  {
+    "state": "Missouri",
+    "control": "Republican"
+  },
+  {
+    "state": "Montana",
+    "control": "Republican"
+  },
+  {
+    "state": "Nebraska",
+    "control": "Nonpartisan"
+  },
+  {
+    "state": "Nevada",
+    "control": "Democrat"
+  },
+  {
+    "state": "New Hampshire",
+    "control": "Republican"
+  },
+  {
+    "state": "New Jersey",
+    "control": "Democrat"
+  },
+  {
+    "state": "New Mexico",
+    "control": "Democrat"
+  },
+  {
+    "state": "New York",
+    "control": "Democrat"
+  },
+  {
+    "state": "North Carolina",
+    "control": "Split"
+  },
+  {
+    "state": "North Dakota",
+    "control": "Republican"
+  },
+  {
+    "state": "Ohio",
+    "control": "Republican"
+  },
+  {
+    "state": "Oklahoma",
+    "control": "Republican"
+  },
+  {
+    "state": "Oregon",
+    "control": "Democrat"
+  },
+  {
+    "state": "Pennsylvania",
+    "control": "Split"
+  },
+  {
+    "state": "Rhode Island",
+    "control": "Democrat"
+  },
+  {
+    "state": "South Carolina",
+    "control": "Republican"
+  },
+  {
+    "state": "South Dakota",
+    "control": "Republican"
+  },
+  {
+    "state": "Tennessee",
+    "control": "Republican"
+  },
+  {
+    "state": "Texas",
+    "control": "Republican"
+  },
+  {
+    "state": "Utah",
+    "control": "Republican"
+  },
+  {
+    "state": "Vermont",
+    "control": "Split"
+  },
+  {
+    "state": "Virginia",
+    "control": "Split"
+  },
+  {
+    "state": "Washington",
+    "control": "Democrat"
+  },
+  {
+    "state": "West Virginia",
+    "control": "Republican"
+  },
+  {
+    "state": "Wisconsin",
+    "control": "Split"
+  },
+  {
+    "state": "Wyoming",
+    "control": "Republican"
+  }
+]

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>états.</title>
+</head>
+<body>
+    <form action="{% url 'etats:index' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="state_name" placeholder="State Name">
+        <input type="text" name="tax_rate" placeholder="Tax Rate">
+        <input type="text" name="tax_rank" placeholder="Tax Rank">
+        <input type="text" name="political_affiliation" placeholder="Politics">
+        <input type="text" name="median_home_value" placeholder="Median Home Value">
+        <input type="text" name="crime_rate" placeholder="Crime Rate">
+        <input type="text" name="crime_rank" placeholder="Crime Rank">
+        <input type="submit" value="Click here"><br>
+        {% for state in state_object %}
+        {{ state }}<br><br>
+        {% endfor %}
+    </form>
+</body>
+</html>
