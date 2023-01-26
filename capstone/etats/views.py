@@ -11,12 +11,15 @@ def index(request):
         form_data = request.POST
         state_object = None
         for item in form_data:
-            if form_data[item] != '':
-                state_object = State.objects.get(item=form_data[item])  ### need to fix item to state model field ###
-        rank_object = Rank.objects.create(
-            state_name=form_data['state_name'], 
-            weighted_rank=form_data['weighted_rank'],
-        )
+            if item != 'csrfmiddlewaretoken' and form_data[item] != '':
+                print(form_data[item])
+                state_object = State.objects.filter(**{item: form_data[item]})  ### need to fix item to state model field ###
+                print(state_object)# state_object = State.objects.filter(item)
+                # state_object = State.objects.all().order_by('state_name').values()
+        # rank_object = Rank.objects.create(
+        #     state_name=form_data['state_name'], 
+        #     weighted_rank=form_data['weighted_rank'],
+        # )
         context = {'state_object': state_object}
         return render(request, 'etats/index.html', context)
 
