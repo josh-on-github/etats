@@ -15,8 +15,11 @@
         <input type="text" name="political_affiliation" placeholder="Politics">
         <input type="text" name="median_home_value" placeholder="Median Home Value">
         <input type="text" name="crime_rate" placeholder="Crime Rate">
-        <input type="text" name="crime rank" placeholder="Crime Rank">
-        <input type="submit" value="Click here">
+        <input type="text" name="crime_rank" placeholder="Crime Rank">
+        <input type="submit" value="Click here"><br>
+        {% for state in state_object %}
+        {{ state }}<br><br>
+        {% endfor %}
     </form>
 </body>
 </html>

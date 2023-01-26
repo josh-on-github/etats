@@ -12,10 +12,11 @@ class State(models.Model):
     def __str__(self):
         return f'''
         State: {self.state_name}
-        Tax Rate: {self.tax_rate}
+        Tax Rate: {self.tax_rate}%
         Tax Rank: {self.tax_rank}
-        Politics: {self.political_affiliation}
-        Median Home Price: {self.median_home_value}
-        Crime Rate: {self.crime_rate}
+        Political Party: {self.political_affiliation}
+        Median Home Price: ${str(self.median_home_value)[0:3] + ',' + str(self.median_home_value)[3:]}
+        Crime Rate: {round(self.crime_rate)} per 100,000
         Crime Rank: {self.crime_rank}
         '''
+        # Median Home Price: ${str(self.median_home_value / 1000).replace('.', ',')}
