@@ -18,22 +18,22 @@
 
     <ul class="nav nav-tabs">
         <li class="nav-item">
-          <a class="nav-link{% block home %} active" aria-current="page"{% endblock %} href="{% url 'index' %}">Home</a>
+          <a class="nav-link{% block home %} active" aria-current="page"{% endblock %} href="{% url 'etats:index' %}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link{% block taxes %}"{% endblock %} href="{% url 'taxes' %}">Taxes</a>
+          <a class="nav-link{% block taxes %}"{% endblock %} href="{% url 'etats:taxes' %}">Taxes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link{% block politics %}"{% endblock %} href="{% url 'politics' %}">Politics</a>
+          <a class="nav-link{% block politics %}"{% endblock %} href="{% url 'etats:politics' %}">Politics</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link{% block housing %}"{% endblock %} href="{% url 'housing' %}">Housing</a>
+            <a class="nav-link{% block housing %}"{% endblock %} href="{% url 'etats:housing' %}">Housing</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link{% block crime %}"{% endblock %} href="{% url 'crime' %}">Crime</a>
+            <a class="nav-link{% block crime %}"{% endblock %} href="{% url 'etats:crime' %}">Crime</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link{% block weighted %}"{% endblock %} href="{% url 'weighted' %}">Weighted List</a>
+            <a class="nav-link{% block weighted %}"{% endblock %} href="{% url 'etats:weighted' %}">Weighted List</a>
         </li>
       </ul>
 
