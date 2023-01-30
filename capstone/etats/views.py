@@ -26,3 +26,23 @@ def index(request):
         rank_list = Rank.objects.all()
         context = {'rank_list': rank_list}
         return render(request, 'etats/index.html', context)
+
+
+    def taxes(request):
+        return render(request, 'etats/taxes.html', context)
+
+
+    def politics(request):
+        return render(request, 'etats/politics.html', context)
+
+
+    def housing(request):
+        return render(request, 'etats/housing.html', context)
+        
+
+    def crime(request):
+        return render(request, 'etats/crime.html', context)
+
+
+    def weighted(request):
+        return render(request, 'etats/weighted.html', context)
