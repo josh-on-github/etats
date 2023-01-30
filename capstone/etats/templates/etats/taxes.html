@@ -4,3 +4,9 @@
 
 {% block home %}"{% endblock %}
 {% block taxes %} active" aria-current="page"{% endblock %}
+
+{% block for %}
+{% for state in state_object %}
+{{ state.state_name }}{{ state.tax_rank }}{{ state.tax_rate }}
+{% endfor %}
+{% endblock %}

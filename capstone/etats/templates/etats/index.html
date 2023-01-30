@@ -47,9 +47,11 @@
         <input type="text" name="crime_rate" placeholder="Crime Rate">
         <input type="text" name="crime_rank" placeholder="Crime Rank">
         <input type="submit" value="Click here"><br>
+        {% block for %}
         {% for state in state_object %}
-        {{ state }}<br><br>
+        {{ state }}
         {% endfor %}
+        {% endblock %}<br><br>
     </form>
 </body>
 </html>
