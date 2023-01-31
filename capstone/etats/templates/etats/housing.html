@@ -4,3 +4,9 @@
 
 {% block home %}"{% endblock %}
 {% block housing %} active" aria-current="page"{% endblock %}
+
+{% block for %}
+{% for state in state_object %}
+State: {{ state.state_name }} Median Housing Price: {{ state.median_home_value }}
+{% endfor %}
+{% endblock %}
