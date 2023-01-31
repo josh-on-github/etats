@@ -5,6 +5,8 @@
 {% block home %}"{% endblock %}
 {% block crime %} active" aria-current="page"{% endblock %}
 
+{% block input %}{% endblock %}
+
 {% block for %}
 {% for state in state_object %}
 State: {{ state.state_name }} Crime Rank: {{ state.crime_rank }} Crime Rate: {{ state.crime_rate }}<br><br>

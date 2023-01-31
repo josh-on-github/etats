@@ -5,6 +5,8 @@
 {% block home %}"{% endblock %}
 {% block politics %} active" aria-current="page"{% endblock %}
 
+{% block input %}{% endblock %}
+
 {% block for %}
 {% for state in state_object %}
 State: {{ state.state_name }} Politics: {{ state.political_affiliation }}<br><br>

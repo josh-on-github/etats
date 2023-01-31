@@ -19,7 +19,7 @@ def index(request):
         #     state_name=form_data['state_name'], 
         #     weighted_rank=form_data['weighted_rank'],
         # )
-        global context
+        # global context
         context = {'state_object': state_object}
         return render(request, 'etats/index.html', context)
 
@@ -30,20 +30,30 @@ def index(request):
 
 
 def taxes(request):
+    state_object = State.objects.all()
+    context = {'state_object' : state_object}
     return render(request, 'etats/taxes.html', context)
 
 
 def politics(request):
+    state_object = State.objects.all()
+    context = {'state_object' : state_object}
     return render(request, 'etats/politics.html', context)
 
 
 def housing(request):
+    state_object = State.objects.all()
+    context = {'state_object' : state_object}
     return render(request, 'etats/housing.html', context)
     
 
 def crime(request):
+    state_object = State.objects.all()
+    context = {'state_object' : state_object}
     return render(request, 'etats/crime.html', context)
 
 
 def weighted(request):
+    state_object = State.objects.all()
+    context = {'state_object' : state_object}
     return render(request, 'etats/weighted.html', context)

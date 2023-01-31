@@ -18,7 +18,7 @@
 
     <ul class="nav nav-tabs">
         <li class="nav-item">
-          <a class="nav-link{% block home %} active" aria-current="page"{% endblock %} href="{% url 'etats:index' %}">Home</a>
+          <a class="nav-link{% block home %} active" aria-current="page"{% endblock %} href="{% url 'etats:index' %}">Search</a>
         </li>
         <li class="nav-item">
           <a class="nav-link{% block taxes %}"{% endblock %} href="{% url 'etats:taxes' %}">Taxes</a>
@@ -50,7 +50,7 @@
         </select><br>
         <button v-on:click="getQuote()">Search</button><br> -->
 
-
+        {% block input %}
         <input type="text" name="state_name" placeholder="State Name">
         <input type="text" name="tax_rate" placeholder="Tax Rate">
         <input type="text" name="tax_rank" placeholder="Tax Rank">
@@ -59,11 +59,12 @@
         <input type="text" name="crime_rate" placeholder="Crime Rate">
         <input type="text" name="crime_rank" placeholder="Crime Rank">
         <input type="submit" value="Click here"><br><br>
+        {% endblock %}
         {% block for %}
         {% for state in state_object %}
         {{ state }}<br><br>
         {% endfor %}
         {% endblock %}<br>
-    </form>
+      </form>
 </body>
 </html>
