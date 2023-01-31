@@ -5,8 +5,10 @@
 {% block home %}"{% endblock %}
 {% block taxes %} active" aria-current="page"{% endblock %}
 
+<!-- {% block form %}{% url 'etats:taxes' %}{% endblock %} -->
+
 {% block for %}
 {% for state in state_object %}
-State: {{ state.state_name }} Rank: {{ state.tax_rank }} Tax Rate: {{ state.tax_rate }}
+State: {{ state.state_name }} Rank: {{ state.tax_rank }} Tax Rate: {{ state.tax_rate }}<br><br>
 {% endfor %}
 {% endblock %}
