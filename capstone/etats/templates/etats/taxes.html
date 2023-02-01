@@ -11,22 +11,32 @@
 {% block for %}
 
 <div id="app">
+    <button type="button" @click="getStateObject()">Click here</button>
     <table>
         <tr>
+            <th>Add</th>
             <th>Rank</th>
             <th>State</th>
             <th>Effective Tax Burden</th>
-            <th>Add to List</th>
         </tr>
+        <!-- {% for state in state_object %}
+        <tr>
+            <td>{{ state.tax_rank }}</td>
+            <td>{{ state.state_name }}</td>
+            <td>{{ state.tax_rate }}%</td>
+        {% endfor %}</tr>
+    </table>
+</div> -->[[ listItems ]]
         <tr v-for="(item, index) in listItems">
-            <td><input id="checkbox" type="checkbox" value="item.completed" v-on:click="boxChecked(item)"></td>
-            <td><p v-bind:class="itemComplete(item)">{{ item.name }}</p></td>
-            <td><img src="css/delete-button.png" alt="Delete Button" @click="deleteItem(index)"></td>
+            {{ item }}
+            <td><input id="checkbox" type="checkbox" value="item.completed" v-on:click="addItem(item)"></td>
+            <td><p v-bind:class="(item)">{{ item.name }}</p></td>
+            <!-- <td><img src="css/delete-button.png" alt="Delete Button" @click="deleteItem(index)"></td> -->
         </tr>
     </table>
 </div>
 
-{% for state in state_object %}
+<!-- {% for state in state_object %}
 State: {{ state.state_name }} Rank: {{ state.tax_rank }} Effective Tax Burden: {{ state.tax_rate }}%<br><br>
-{% endfor %}
+{% endfor %} -->
 {% endblock %}
