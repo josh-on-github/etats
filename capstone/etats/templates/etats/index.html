@@ -57,18 +57,39 @@
 
         {% block input %}
         <div id="app">
-          <input type="text" placeholder="Enter State Name">
-          <!-- <input id="search" type="text" v-model="userInput" placeholder="Enter State Name"> -->
-          <select name="searchType" id="searchType">
+          <!-- <input type="text" placeholder="Enter State Name"> -->
+          <input id="search" type="text" v-model="userItem" placeholder="Enter State Name">
+          <select>
+          <!-- <select name="searchType" id="searchType"> -->
           <!-- <select name="searchType" id="searchType" v-model="typeChoice"> -->
               <option disabled hidden selected>Select One</option>
-              <option value="state_name">State Name</option>
-              <option value="tax_rate">Tax Rate</option>
-              <option value="politics">Politics</option>
-              <option value="median_home_value">Median Home Value</option>
-              <option value="crime_rate">Crime Rate</option>
+              <option name="state_name" :value="userItem">State Name</option>
+              <option name="tax_rate" :value="userItem">Tax Rate</option>
+              <option name="political_affiliation" :value="userItem">Politics</option>
+              <option name="median_home_value" :value="userItem">Median Home Value</option>
+              <option name="crime_rate" :value="userItem">Crime Rate</option>
           </select><br>
           <input type="submit" value="Search"><br><br>
+          <table>
+            <tr>
+                <th>Add</th>
+                <th>State</th>
+                <th>Effective Tax Burden</th>
+                <th>Political Affiliation</th>
+                <th>Median Home Value</th>
+                <th>Crime Rate (per 100,000)</th>
+            </tr>
+            <tr v-for="(state, index) in listItems">
+                <td><input id="checkbox" type="checkbox" value="item.completed" v-on:click="addItem(state)"></td>
+                <td>[[ state.state_name ]]</td>
+                <td>[[ state.tax_rate ]]%</td>
+                <td>[[ state.political_affiliation ]]</td>
+                <td>$[[ state.median_home_value ]]</td>
+                <td>[[ state.crime_rate ]]</td>
+                <!-- <td><p v-bind:class="(item)">[[ item.state_name ]]</p></td> -->
+                <!-- <td><img src="css/delete-button.png" alt="Delete Button" @click="deleteItem(index)"></td> -->
+            </tr>
+          </table>
         </div>
         <!-- <input type="text" name="state_name" placeholder="State Name">
         <input type="text" name="tax_rate" placeholder="Tax Rate">
@@ -79,9 +100,9 @@
         <input type="text" name="crime_rank" placeholder="Crime Rank"> -->
         {% endblock %}
         {% block for %}
-        {% for state in state_object %}
+        <!-- {% for state in state_object %}
         {{ state }}<br><br>
-        {% endfor %}
+        {% endfor %} -->
         {% endblock %}<br>
       </form>
 </body>
