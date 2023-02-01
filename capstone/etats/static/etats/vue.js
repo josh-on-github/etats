@@ -9,15 +9,18 @@ new Vue({
 
     },
     delimiters: ['[[',']]'],
-    mounted: () => {
+    mounted() {
+        this.getStateObject()
+    },
+    // mounted: () => {
         // this.getStateObject()
         // // console.log('Test')
-            console.log('GET Request');
-            axios.get('/api')
+            // console.log('GET Request');
+            // axios.get('/api')
             // .then(response => console.log(response.data))
-            .then(response => this.listItems = response.data)
+            // .then(response => this.listItems = response.data)
                 // this.listItems.push(response.data))
-    },
+    // },
     methods: {
         // searches Free Dictionary API with user input and loads definition 
         getStateObject() {
