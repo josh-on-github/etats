@@ -8,7 +8,19 @@
 {% block input %}{% endblock %}
 
 {% block for %}
-{% for state in state_object %}
-State: {{ state.state_name }} Median Housing Price: {{ state.median_home_value }}<br><br>
-{% endfor %}
-{% endblock %}
+<div id="app">
+    <table>
+        <tr>
+            <th>Add</th>
+            <th>State</th>
+            <th>Median Housing Value</th>
+        </tr>
+        <tr v-for="(state, index) in listItems">
+            <td><input id="checkbox" type="checkbox" value="item.completed" v-on:click="addItem(state)"></td>
+            <td>[[ state.state_name ]]</td>
+            <td>$[[ state.median_home_value ]]</td>
+            <!-- <td><p v-bind:class="(item)">[[ item.state_name ]]</p></td> -->
+            <!-- <td><img src="css/delete-button.png" alt="Delete Button" @click="deleteItem(index)"></td> -->
+        </tr>
+    </table>
+</div>{% endblock %}

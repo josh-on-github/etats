@@ -56,14 +56,27 @@
         <button v-on:click="getQuote()">Search</button><br> -->
 
         {% block input %}
-        <input type="text" name="state_name" placeholder="State Name">
+        <div id="app">
+          <input type="text" placeholder="Enter State Name">
+          <!-- <input id="search" type="text" v-model="userInput" placeholder="Enter State Name"> -->
+          <select name="searchType" id="searchType">
+          <!-- <select name="searchType" id="searchType" v-model="typeChoice"> -->
+              <option disabled hidden selected>Select One</option>
+              <option value="state_name">State Name</option>
+              <option value="tax_rate">Tax Rate</option>
+              <option value="politics">Politics</option>
+              <option value="median_home_value">Median Home Value</option>
+              <option value="crime_rate">Crime Rate</option>
+          </select><br>
+          <input type="submit" value="Search"><br><br>
+        </div>
+        <!-- <input type="text" name="state_name" placeholder="State Name">
         <input type="text" name="tax_rate" placeholder="Tax Rate">
         <input type="text" name="tax_rank" placeholder="Tax Rank">
         <input type="text" name="political_affiliation" placeholder="Politics">
         <input type="text" name="median_home_value" placeholder="Median Home Value">
         <input type="text" name="crime_rate" placeholder="Crime Rate">
-        <input type="text" name="crime_rank" placeholder="Crime Rank">
-        <input type="submit" value="Search"><br><br>
+        <input type="text" name="crime_rank" placeholder="Crime Rank"> -->
         {% endblock %}
         {% block for %}
         {% for state in state_object %}
