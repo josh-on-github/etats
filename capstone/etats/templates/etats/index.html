@@ -80,12 +80,14 @@
                 <th>Crime Rate (per 100,000)</th>
             </tr>
             <tr v-for="(state, index) in listItems">
-                <td><input id="checkbox" type="checkbox" value="item.completed" v-on:click="addItem(state)"></td>
+              <!-- <template v-show="state.state_name == 'userInput'"> -->
+                <td><input id="checkbox" type="checkbox" value="userItem" v-on:click="addItem(state)"></td>
                 <td>[[ state.state_name ]]</td>
                 <td>[[ state.tax_rate ]]%</td>
                 <td>[[ state.political_affiliation ]]</td>
                 <td>$[[ state.median_home_value ]]</td>
                 <td>[[ state.crime_rate ]]</td>
+              <!-- </template> -->
                 <!-- <td><p v-bind:class="(item)">[[ item.state_name ]]</p></td> -->
                 <!-- <td><img src="css/delete-button.png" alt="Delete Button" @click="deleteItem(index)"></td> -->
             </tr>
