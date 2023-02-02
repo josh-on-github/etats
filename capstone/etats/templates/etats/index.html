@@ -45,9 +45,10 @@
       <div id="app">
         <form @submit.prevent="onSubmit">
           <select v-model="userItem">
-            <option disabled hidden selected>Select a State</option>
+            <option value="">Select a State</option>
+            <!-- <option disabled hidden>Select a State</option> -->
             <option v-for="state in listItems" :value="state.state_name">[[ state.state_name ]]</option>
-          </select><br>
+          </select>
           <input type="submit" value="Search"><br><br>
         </form>
 
