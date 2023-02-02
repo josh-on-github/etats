@@ -16,11 +16,10 @@
             <th>Median Housing Value</th>
         </tr>
         <tr v-for="(state, index) in listItems">
-            <td><input id="checkbox" type="checkbox" value="item.completed" v-on:click="addItem(state)"></td>
+            <td><input id="checkbox" type="checkbox" v-on:click="addHousingItem(state)"></td>
             <td>[[ state.state_name ]]</td>
             <td>$[[ state.median_home_value ]]</td>
-            <!-- <td><p v-bind:class="(item)">[[ item.state_name ]]</p></td> -->
-            <!-- <td><img src="css/delete-button.png" alt="Delete Button" @click="deleteItem(index)"></td> -->
         </tr>
     </table>
-</div>{% endblock %}
+</div>
+{% endblock %}

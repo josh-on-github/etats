@@ -46,7 +46,6 @@
         <form @submit.prevent="onSubmit">
           <select v-model="userItem">
             <option value="">Select a State</option>
-            <!-- <option disabled hidden>Select a State</option> -->
             <option v-for="state in listItems" :value="state.state_name">[[ state.state_name ]]</option>
           </select>
           <input type="submit" value="Search"><br><br>
@@ -81,33 +80,3 @@
       {% endblock %}<br>
 </body>
 </html>
-        
-
-
-
-
-
-
-        <!-- <template v-if="'state.state_name' === ''">
-        <table v-show="active">
-          <tr>
-              <th>Add</th>
-              <th>State</th>
-              <th>Effective Tax Burden</th>
-              <th>Political Affiliation</th>
-              <th>Median Home Value</th>
-              <th>Crime Rate (per 100,000)</th>
-          </tr>
-          <tr v-for="(state, index) in listItems"> -->
-            <!-- <template v-show="state.state_name == 'userInput'"> -->
-              <!-- <td><input id="checkbox" type="checkbox" value="userItem" v-on:click="addItem(state)"></td>
-              <td>[[ state.state_name ]]</td>
-              <td>[[ state.tax_rate ]]%</td>
-              <td>[[ state.political_affiliation ]]</td>
-              <td>$[[ state.median_home_value ]]</td>
-              <td>[[ state.crime_rate ]]</td> -->
-              <!-- <td><p v-bind:class="(item)">[[ item.state_name ]]</p></td> -->
-              <!-- <td><img src="css/delete-button.png" alt="Delete Button" @click="deleteItem(index)"></td> -->
-            <!-- </tr>
-          </table>
-        </template> -->
