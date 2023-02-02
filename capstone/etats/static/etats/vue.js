@@ -28,20 +28,59 @@ new Vue({
         },
         // Appends user input to 'listItems' array and clears input field
         addTaxItem (state) {
-            this.taxList.push(state);
-            console.log(this.taxList);
+            let stateName = state.state_name;
+            let index = this.taxList.indexOf(stateName);
+            
+            if (index === -1) {
+              this.taxList.push(stateName);
+              console.log(this.taxList);
+              alert(`You have added ${stateName} to your favorites.`)
+            } else {
+              this.taxList.splice(index, 1);
+              console.log(this.taxList);
+              alert(`You have removed ${stateName} from your favorites.`)
+            }
         },
         addPoliticsItem (state) {
-            this.politicsList.push(state);
-            console.log(this.politicsList);
-        },
+            let stateName = state.state_name;
+            let index = this.politicsList.indexOf(stateName);
+            
+            if (index === -1) {
+              this.politicsList.push(stateName);
+              console.log(this.politicsList);
+              alert(`You have added ${stateName} to your favorites.`)
+            } else {
+              this.politicsList.splice(index, 1);
+              console.log(this.politicsList);
+              alert(`You have removed ${stateName} from your favorites.`)
+            }        },
         addHousingItem (state) {
-            this.housingList.push(state);
-            console.log(this.housingList);
+            let stateName = state.state_name;
+            let index = this.housingList.indexOf(stateName);
+            
+            if (index === -1) {
+              this.housingList.push(stateName);
+              console.log(this.housingList);
+              alert(`You have added ${stateName} to your favorites.`)
+            } else {
+              this.housingList.splice(index, 1);
+              console.log(this.housingList);
+              alert(`You have removed ${stateName} from your favorites.`)
+            }
         },
         addCrimeItem (state) {
-            this.crimeList.push(state);
-            console.log(this.crimeList);
+            let stateName = state.state_name;
+            let index = this.crimeList.indexOf(stateName);
+            
+            if (index === -1) {
+              this.crimeList.push(stateName);
+              console.log(this.crimeList);
+              alert(`You have added ${stateName} to your favorites.`)
+            } else {
+              this.crimeList.splice(index, 1);
+              console.log(this.crimeList);
+              alert(`You have removed ${stateName} from your favorites.`)
+            }
         },
         // Item is marked complete/incomplete
         boxChecked (todoItem) {
