@@ -29,15 +29,19 @@ new Vue({
         // Appends user input to 'listItems' array and clears input field
         addTaxItem (state) {
             this.taxList.push(state);
+            console.log(this.taxList);
         },
         addPoliticsItem (state) {
             this.politicsList.push(state);
+            console.log(this.politicsList);
         },
         addHousingItem (state) {
             this.housingList.push(state);
+            console.log(this.housingList);
         },
         addCrimeItem (state) {
             this.crimeList.push(state);
+            console.log(this.crimeList);
         },
         // Item is marked complete/incomplete
         boxChecked (todoItem) {
