@@ -16,11 +16,11 @@ new Vue({
   delimiters: ['[[',']]'],
   mounted() {
     this.getStateObject();
-    // Retrieve the lists from localStorage
-    this.taxList = JSON.parse(localStorage.getItem('taxList'));
-    this.politicsList = JSON.parse(localStorage.getItem('politicsList'));
-    this.housingList = JSON.parse(localStorage.getItem('housingList'));
-    this.crimeList = JSON.parse(localStorage.getItem('crimeList'));
+    // // Retrieve the lists from localStorage
+    // this.taxList = JSON.parse(localStorage.getItem('taxList'));
+    // this.politicsList = JSON.parse(localStorage.getItem('politicsList'));
+    // this.housingList = JSON.parse(localStorage.getItem('housingList'));
+    // this.crimeList = JSON.parse(localStorage.getItem('crimeList'));
   },
   
   mounted() {
@@ -47,6 +47,7 @@ new Vue({
             this[listName].push(state.state_name);
         }
         console.log(this[listName]);
+        // Overwrite the lists in localStorage
         alert(`You have updated your ${listName.split("List")[0]} favorites to the following: ${this[listName]}.`)
         // Store the list to localStorage
         localStorage.setItem(listName, JSON.stringify(this[listName]));
@@ -100,17 +101,3 @@ new Vue({
       },
   }
 })
-  
-  // // stores saved words to local storage, alerts user, and empties savedWords array
-  // downloadWordList() {
-  //   const download = this.savedWords
-  //   localStorage.setItem('download', JSON.stringify(download));
-  //   console.log(download);
-  //   this.savedWords = [];
-  //   alert('You have successfully downloaded your saved words.')
-  // },
-  // // loads stored words from local storage
-  // uploadWordList() {
-  //   const upload = JSON.parse(localStorage.getItem('download'));
-  //   this.savedWords = upload
-  // },
