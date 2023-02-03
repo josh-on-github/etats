@@ -11,17 +11,18 @@
 <div id="app">
     <table>
         <tr>
-            <th>Add</th>
+            <th>Select</th>
             <th>Rank</th>
             <th>State</th>
             <th>Crime Rate (per 100,000)</th>
         </tr>
         <tr v-for="(state, index) in listItems">
-            <td><input id="checkbox" type="checkbox" v-on:click="addCrimeItem(state)"></td>
+            <td><input type="checkbox" v-model="selectedStates" :value="state"></td>
             <td>[[ state.crime_rank ]]</td>
             <td>[[ state.state_name ]]</td>
             <td>[[ state.crime_rate ]]</td>
         </tr>
     </table>
+    <button @click="addSelectedStates('crimeList')">Add Selected States</button>
 </div>
 {% endblock %}

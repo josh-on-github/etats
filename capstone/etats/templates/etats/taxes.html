@@ -11,17 +11,19 @@
 <div id="app">
     <table>
         <tr>
-            <th>Add</th>
+            <th>Select</th>
             <th>Rank</th>
             <th>State</th>
             <th>Effective Tax Burden</th>
         </tr>
         <tr v-for="(state, index) in listItems">
-            <td><input id="checkbox" type="checkbox" v-on:click="addTaxItem(state)"></td>
+            <td><input type="checkbox" v-model="selectedStates" :value="state"></td>
             <td>[[ state.tax_rank ]]</td>
             <td>[[ state.state_name ]]</td>
             <td>[[ state.tax_rate ]]%</td>
         </tr>
     </table>
+    <button @click="addSelectedStates('taxList')">Add Selected States</button>
 </div>
 {% endblock %}
+
