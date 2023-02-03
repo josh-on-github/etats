@@ -47,18 +47,19 @@ new Vue({
             this.selectedStates.splice(index, 1);
         }
       },
-      // stores saved words to local storage, alerts user, and empties savedWords array
-      downloadWordList() {
-        const download = this.savedWords
-        localStorage.setItem('download', JSON.stringify(download));
-        console.log(download);
-        this.savedWords = [];
-        alert('You have successfully downloaded your saved words.')
-      },
-      // loads stored words from local storage
-      uploadWordList() {
-        const upload = JSON.parse(localStorage.getItem('download'));
-        this.savedWords = upload
-      },
-  },
-})
+    },
+  })
+  
+  // // stores saved words to local storage, alerts user, and empties savedWords array
+  // downloadWordList() {
+  //   const download = this.savedWords
+  //   localStorage.setItem('download', JSON.stringify(download));
+  //   console.log(download);
+  //   this.savedWords = [];
+  //   alert('You have successfully downloaded your saved words.')
+  // },
+  // // loads stored words from local storage
+  // uploadWordList() {
+  //   const upload = JSON.parse(localStorage.getItem('download'));
+  //   this.savedWords = upload
+  // },
