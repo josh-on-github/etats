@@ -16,6 +16,15 @@ new Vue({
   delimiters: ['[[',']]'],
   mounted() {
     this.getStateObject();
+    // Retrieve the lists from localStorage
+    this.taxList = JSON.parse(localStorage.getItem('taxList'));
+    this.politicsList = JSON.parse(localStorage.getItem('politicsList'));
+    this.housingList = JSON.parse(localStorage.getItem('housingList'));
+    this.crimeList = JSON.parse(localStorage.getItem('crimeList'));
+  },
+  
+  mounted() {
+    this.getStateObject();
   },
   methods: {
       // searches API and loads state information
@@ -39,7 +48,8 @@ new Vue({
         }
         console.log(this[listName]);
         alert(`You have updated your ${listName.split("List")[0]} favorites to the following: ${this[listName]}.`)
-
+        // Store the list to localStorage
+        localStorage.setItem(listName, JSON.stringify(this[listName]));
       },
       // Add/remove state from selectedStates array based on checkbox value
       addItem(listName, state) {
