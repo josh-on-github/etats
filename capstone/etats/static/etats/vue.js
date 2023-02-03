@@ -51,32 +51,43 @@ new Vue({
         }
       },
       sortTaxList() {
+        // Toggle the value of `taxSortOrder`
         this.taxSortOrder = !this.taxSortOrder;
+        // Sort the `listItems` array based on the value of `taxSortOrder`
+        // If `taxSortOrder` is `false`, sort in descending order by tax rate
         this.listItems.sort((a, b) => {
         return this.taxSortOrder ? a.tax_rate - b.tax_rate : b.tax_rate - a.tax_rate;
         });
       },
       sortHousingList() {
+        // Toggle the value of `housingSortOrder`
         this.housingSortOrder = !this.housingSortOrder;
+        // Sort the `listItems` array based on the value of `housingSortOrder`
+        // If `housingSortOrder` is `false`, sort in descending order by median home value
         this.listItems.sort((a, b) => {
         return this.housingSortOrder ? a.median_home_value - b.median_home_value : b.median_home_value - a.median_home_value;
         });
       },
       sortCrimeList() {
+        // Toggle the value of `crimeSortOrder`
         this.crimeSortOrder = !this.crimeSortOrder;
+        // Sort the `listItems` array based on the value of `crimeSortOrder`
+        // If `crimeSortOrder` is `false`, sort in descending order by crime rate
         this.listItems.sort((a, b) => {
         return this.crimeSortOrder ? a.crime_rate - b.crime_rate : b.crime_rate - a.crime_rate;
         });
       },
       sortPoliticsList() {
-        this.politicsSortOrder = !this.politicsSortOrder;
+        // Compares the political affiliation of two states (a and b)
         this.listItems.sort((a, b) => {
+          // If the political affiliation of state 'a' is greater than (later in alphabetical order) that of state 'b', return 1.
           if (a.political_affiliation > b.political_affiliation) return 1;
+          // If the political affiliation of state 'a' is less than (earlier in alphabetical order) that of state 'b', return -1.
           if (a.political_affiliation < b.political_affiliation) return -1;
+          // If the political affiliation of both states is the same, return 0.
           return 0;
         });
       },
-      
   }
 })
   
