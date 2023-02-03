@@ -14,7 +14,7 @@
             <th>Select</th>
             <th>Rank</th>
             <th>State</th>
-            <th>Effective Tax Burden</th>
+            <th @click="sortTaxList()">Effective Tax Burden</th>
         </tr>
         <tr v-for="(state, index) in listItems">
             <td><input type="checkbox" v-model="selectedStates" :value="state"></td>

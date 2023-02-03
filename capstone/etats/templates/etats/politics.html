@@ -13,7 +13,7 @@
         <tr>
             <th>Select</th>
             <th>State</th>
-            <th>Political Affiliation</th>
+            <th @click="sortPoliticsList()">Political Affiliation</th>
         </tr>
         <tr v-for="(state, index) in listItems">
             <td><input type="checkbox" v-model="selectedStates" :value="state"></td>

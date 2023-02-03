@@ -14,7 +14,7 @@
             <th>Select</th>
             <th>Rank</th>
             <th>State</th>
-            <th>Crime Rate (per 100,000)</th>
+            <th @click="sortCrimeList()">Crime Rate (per 100,000)</th>
         </tr>
         <tr v-for="(state, index) in listItems">
             <td><input type="checkbox" v-model="selectedStates" :value="state"></td>

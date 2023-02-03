@@ -4,9 +4,12 @@ new Vue({
     userItem: '',
     listItems: [],
     taxList: [],
+    taxSortOrder: false,
     politicsList: [],
     housingList: [],
+    housingSortOrder: false,
     crimeList: [],
+    crimeSortOrder: false,
     selectedStates: [],
     active: false,
   },
@@ -47,8 +50,35 @@ new Vue({
             this.selectedStates.splice(index, 1);
         }
       },
-    },
-  })
+      sortTaxList() {
+        this.taxSortOrder = !this.taxSortOrder;
+        this.listItems.sort((a, b) => {
+        return this.taxSortOrder ? a.tax_rate - b.tax_rate : b.tax_rate - a.tax_rate;
+        });
+      },
+      sortHousingList() {
+        this.housingSortOrder = !this.housingSortOrder;
+        this.listItems.sort((a, b) => {
+        return this.housingSortOrder ? a.median_home_value - b.median_home_value : b.median_home_value - a.median_home_value;
+        });
+      },
+      sortCrimeList() {
+        this.crimeSortOrder = !this.crimeSortOrder;
+        this.listItems.sort((a, b) => {
+        return this.crimeSortOrder ? a.crime_rate - b.crime_rate : b.crime_rate - a.crime_rate;
+        });
+      },
+      sortPoliticsList() {
+        this.politicsSortOrder = !this.politicsSortOrder;
+        this.listItems.sort((a, b) => {
+          if (a.political_affiliation > b.political_affiliation) return 1;
+          if (a.political_affiliation < b.political_affiliation) return -1;
+          return 0;
+        });
+      },
+      
+  }
+})
   
   // // stores saved words to local storage, alerts user, and empties savedWords array
   // downloadWordList() {

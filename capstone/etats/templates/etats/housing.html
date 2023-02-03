@@ -13,7 +13,7 @@
         <tr>
             <th>Select</th>
             <th>State</th>
-            <th>Median Housing Value</th>
+            <th @click="sortHousingList()">Median Housing Value</th>
         </tr>
         <tr v-for="(state, index) in listItems">
             <td><input type="checkbox" v-model="selectedStates" :value="state"></td>
@@ -22,6 +22,5 @@
         </tr>
     </table>
     <button @click="addSelectedStates('housingList')">Add Selected States</button>
-    <!-- <button @click="addSelectedStates('crimeList')">Add Selected States</button> -->
 </div>
 {% endblock %}
