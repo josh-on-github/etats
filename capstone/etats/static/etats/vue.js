@@ -101,3 +101,43 @@ new Vue({
       },
   }
 })
+
+
+
+// // Create a function to calculate the favorites list
+// calculateFavoritesList() {
+//   // Create a new object to store state names and their count
+//   let favoritesList = {};
+//   // Array of all the lists in localStorage
+//   let lists = ['taxList', 'politicsList', 'housingList', 'crimeList'];
+  
+//   // Loop through each list in the lists array
+//   for (const listName of lists) {
+//     // Retrieve the list from localStorage
+//     let currentList = JSON.parse(localStorage.getItem(listName));
+
+//     // Loop through each state in the current list
+//     for (const state of currentList) {
+//       // Check if the state is already a key in the favoritesList object
+//       if (favoritesList.hasOwnProperty(state)) {
+//         // If so, increment its count by 1
+//         favoritesList[state]++;
+//       } else {
+//         // If not, create a new key with a count of 1
+//         favoritesList[state] = 1;
+//       }
+//     }
+//   }
+
+//   // Convert the favoritesList object to an array of objects with state names as keys and counts as values
+//   let result = [];
+//   for (const state in favoritesList) {
+//     result.push({ state: state, count: favoritesList[state] });
+//   }
+  
+//   // Store the favorites list to localStorage
+//   localStorage.setItem('favoritesList', JSON.stringify(result));
+
+//   // Return the result
+//   return result;
+// }
