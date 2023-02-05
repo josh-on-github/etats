@@ -1,8 +1,25 @@
 {% extends 'etats/index.html' %}
 
-{% block title %}Weighted Rank{% endblock %}
+{% block title %}Favorites{% endblock %}
 
 {% block home %}"{% endblock %}
 {% block weighted %} active" aria-current="page"{% endblock %}
 
 {% block input %}{% endblock %}
+
+{% block for %}
+<div id="app">
+    <table>
+        <tr>
+            <th>Select</th>
+            <th>Rank</th>
+            <th>State</th>
+        </tr>
+        <tr v-for="(state, index) in listItems">
+            <td><input type="checkbox" v-model="selectedStates" :value="state"></td>
+            <td>[[ state.state_name ]]</td>
+        </tr>
+    </table>
+    <button @click="deleteSelectedStates('favoritesList')">Delete Selected States</button>
+</div>
+{% endblock %}
