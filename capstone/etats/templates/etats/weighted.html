@@ -15,8 +15,9 @@
             <th>Rank</th>
             <th>State</th>
         </tr>
-        <tr v-for="(state, index) in listItems">
+        <tr v-for="(state, index) in favoritesList">
             <td><input type="checkbox" v-model="selectedStates" :value="state"></td>
+            <td>[[ index + 1 ]]</td>
             <td>[[ state.state_name ]]</td>
         </tr>
     </table>
