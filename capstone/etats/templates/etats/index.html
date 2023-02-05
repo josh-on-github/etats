@@ -22,7 +22,7 @@
 
     <ul class="nav nav-tabs">
         <li class="nav-item">
-          <a class="nav-link{% block home %} active" aria-current="page"{% endblock %} href="{% url 'etats:index' %}">Search by State</a>
+          <a class="nav-link{% block home %} active" aria-current="page"{% endblock %} href="{% url 'etats:index' %}">State Summary</a>
         </li>
         <li class="nav-item">
           <a class="nav-link{% block taxes %}"{% endblock %} href="{% url 'etats:taxes' %}">Taxes</a>
@@ -54,7 +54,6 @@
         <template v-if="userItem">
           <table v-show="active">
             <tr>
-                <th>Add</th>
                 <th>State</th>
                 <th>Effective Tax Burden</th>
                 <th>Political Affiliation</th>
@@ -62,7 +61,6 @@
                 <th>Crime Rate (per 100,000)</th>
             </tr>
             <tr v-for="state in listItems" v-if="state.state_name === userItem">
-                <td><input id="checkbox" type="checkbox" value="state" v-on:click="addItem(state)"></td>
                 <td>[[ state.state_name ]]</td>
                 <td>[[ state.tax_rate ]]%</td>
                 <td>[[ state.political_affiliation ]]</td>
