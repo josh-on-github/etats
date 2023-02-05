@@ -10,36 +10,20 @@ new Vue({
     housingSortOrder: false,
     crimeList: [],
     crimeSortOrder: false,
-    favoritesList: [],
     selectedStates: [],
     active: false,
   },
   delimiters: ['[[',']]'],
-  watch: {
-    taxList: function(newVal, oldVal) {
-      this.updateFavorites();
-    },
-    politicsList: function(newVal, oldVal) {
-      this.updateFavorites();
-    },
-    housingList: function(newVal, oldVal) {
-      this.updateFavorites();
-    },
-    crimeList: function(newVal, oldVal) {
-      this.updateFavorites();
+  mounted() {
+    this.getStateObject();
+    try {
+    this.taxList = JSON.parse(localStorage.getItem('taxList')) || [];
+    this.politicsList = JSON.parse(localStorage.getItem('politicsList')) || [];
+    this.housingList = JSON.parse(localStorage.getItem('housingList')) || [];
+    this.crimeList = JSON.parse(localStorage.getItem('crimeList')) || [];
+    } catch (error) {
+    console.error(error);
     }
-  },
-  mounted() {
-    this.getStateObject();
-    // // Retrieve the lists from localStorage
-    this.favoritesList = JSON.parse(localStorage.getItem('favoritesList'));
-    this.taxList = JSON.parse(localStorage.getItem('taxList'));
-    this.politicsList = JSON.parse(localStorage.getItem('politicsList'));
-    this.housingList = JSON.parse(localStorage.getItem('housingList'));
-    this.crimeList = JSON.parse(localStorage.getItem('crimeList'));
-  },
-  mounted() {
-    this.getStateObject();
   },
   methods: {
       // searches API and loads state information
@@ -114,48 +98,28 @@ new Vue({
           return 0;
         });
       },
-      // Create a function to calculate the favorites list
-      calculateFavoritesList() {
-        // Create a new object to store state names and their count
-        let favoritesList = {};
-        // Array of all the lists in localStorage
-        let lists = ['taxList', 'politicsList', 'housingList', 'crimeList'];
-        
-        // Loop through each list in the lists array
-        for (const listName of lists) {
-          // Retrieve the list from localStorage
-          let currentList = JSON.parse(localStorage.getItem(listName));
-      
-          // Loop through each state in the current list
-          for (const state of currentList) {
-            // Check if the state is already a key in the favoritesList object
-            if (favoritesList.hasOwnProperty(state)) {
-              // If so, increment its count by 1
-              favoritesList[state]++;
-            } else {
-              // If not, create a new key with a count of 1
-              favoritesList[state] = 1;
-            }
-          }
+  },
+  computed: {
+    sortedList() {
+      return this.listItems.sort((a, b) => {
+        return b.count - a.count;
+      });
+    },
+    favoritesList() {
+      let result = [];
+      this.listItems.forEach(item => {
+        let count = 0;
+        if (this.taxList.includes(item.state_name)) count++;
+        if (this.politicsList.includes(item.state_name)) count++;
+        if (this.housingList.includes(item.state_name)) count++;
+        if (this.crimeList.includes(item.state_name)) count++;
+        if (count > 0) {
+          item.count = count;
+          result.push(item);
         }
-        // Convert the favoritesList object to an array of objects with state names as keys and counts as values
-        let result = [];
-        for (const state in favoritesList) {
-          result.push({ state: state, count: favoritesList[state] });
-        }
-        // Store the favorites list to localStorage
-        localStorage.setItem('favoritesList', JSON.stringify(result));
-        // Return the result
-        return result;
-      },
-      updateFavorites() {
-        this.favoritesList.push(...this.taxList, ...this.politicsList, ...this.housingList, ...this.crimeList);
-        localStorage.setItem('favoritesList', JSON.stringify(this.favoritesList));
-
-      },
-      deleteSelectedStates(listName) {
-        this[listName] = this[listName].filter(state => !this.selectedStates.includes(state));
-        this.selectedStates = [];
-      }
+      });
+      return result.sort((a, b) => b.count - a.count);
+    }
+    }
   }
-})
+)

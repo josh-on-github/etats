@@ -14,13 +14,15 @@
             <th>Select</th>
             <th>Rank</th>
             <th>State</th>
+            <th>Times Saved</th>
         </tr>
         <tr v-for="(state, index) in favoritesList">
             <td><input type="checkbox" v-model="selectedStates" :value="state"></td>
             <td>[[ index + 1 ]]</td>
             <td>[[ state.state_name ]]</td>
+            <td>[[ (taxList.includes(state.state_name) ? 1 : 0) + (politicsList.includes(state.state_name) ? 1 : 0) + (housingList.includes(state.state_name) ? 1 : 0) + (crimeList.includes(state.state_name) ? 1 : 0) ]]</td>
         </tr>
     </table>
-    <button @click="deleteSelectedStates('favoritesList')">Delete Selected States</button>
+    <!-- <button @click="deleteSelectedStates('favoritesList')">Delete Selected States</button> -->
 </div>
 {% endblock %}
