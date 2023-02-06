@@ -98,22 +98,28 @@ new Vue({
       try {
         const doc = new jsPDF();
         const favoritesList = this.favoritesList;
-        // JSON.parse(localStorage.getItem("favoritesList"));
         const header = ["Weighted Rank", "State", "Times Saved"];
         const data = [];
         favoritesList.forEach(function(state, index) {
           const timesSaved = state.count;
-          // (taxList.includes(state.state_name) ? 1 : 0) + (politicsList.includes(state.state_name) ? 1 : 0) 
-          // + (housingList.includes(state.state_name) ? 1 : 0) + (crimeList.includes(state.state_name) ? 1 : 0);
           data.push([index + 1, state.state_name, timesSaved]);
         });
-        doc.autoTable({
-          head: [header],
-          body: data,
-          startY: 20
+
+        const headerXPositions = [20, 75, 150]; // array of x-coordinate positions for each header item
+        // Loop through the header array
+        header.forEach((headerItem, index) => {
+          // Add each header item to the PDF document at the specified x position, y position 20, and with the text of the header item
+          doc.text(headerXPositions[index], 20, headerItem);
         });
-        doc.save("favoritesList.pdf");
-        alert('Your favorites have been downloaded to the "Downloads" folder on your device.')
+        // Loop through each item in the data array
+        data.forEach((dataItem, index) => {
+          // Set weighted rank, state name, and times saved for each item on their respective positions
+          doc.text(headerXPositions[0], 30 + (index * 10), dataItem[0].toString());
+          doc.text(headerXPositions[1], 30 + (index * 10), dataItem[1]);
+          doc.text(headerXPositions[2], 30 + (index * 10), dataItem[2].toString());
+        });
+        doc.save("favoritestates.pdf");
+        alert('Your favorites have been downloaded.')
       } catch (error) {
         console.error(error);
       }
