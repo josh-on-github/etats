@@ -27,73 +27,91 @@ new Vue({
     }
   },
   methods: {
-      // searches API and loads state information
-      getStateObject() {
-          console.log('GET Request');
-          axios.get('/api') // send a GET request to the '/api' endpoint
-          .then(response => this.listItems = response.data) // store the data in the listItems array
-          .then(data => console.log(data))
-          .catch(error => console.error(error));
-      },
-      onSubmit() {
+    // searches API and loads state information
+    getStateObject() {
+      console.log('GET Request');
+      axios.get('/api') // send a GET request to the '/api' endpoint
+      .then(response => this.listItems = response.data) // store the data in the listItems array
+      .then(data => console.log(data))
+      .catch(error => console.error(error));
+    },
+    onSubmit() {
       // set active to true when form is submitted
       this.active = true;
-      },
-      addSelectedStates(listName) {
-        // clear the list
-        this[listName] = [];
-        // loop through the selected states and add them to list
-        for (const state of this.selectedStates) {
-            this[listName].push(state.state_name);
-        }
-        console.log(this[listName]);
-        alert(`You have updated your ${listName.split("List")[0]} favorites to the following: ${this[listName]}.`)
-        // Store the list to localStorage
-        localStorage.setItem(listName, JSON.stringify(this[listName]));
-      },
-      // Add/remove state from selectedStates array based on checkbox value
-      addItem(listName, state) {
-        const index = this.selectedStates.indexOf(state);
-        // Add the state to the selectedStates array if it is not in the array already
-        if (index === -1) { // -1 means that 'index' is not present in the array
-            this.selectedStates.push(state);
-        // Remove the state from the selectedStates array if it is in the array
-        } else {
-            this.selectedStates.splice(index, 1);
-        }
-      },
-      sortTaxList() {
-        // Toggle the value of `taxSortOrder`
-        this.taxSortOrder = !this.taxSortOrder;
-        // Sort the `listItems` array based on the value of `taxSortOrder`
-        // If `taxSortOrder` is `false`, sort in descending order by tax rate
-        this.listItems.sort((a, b) => { //comparison function returns the difference between the tax rate of two items (a and b).
-        return this.taxSortOrder ? a.tax_rate - b.tax_rate : b.tax_rate - a.tax_rate;
-        });
-      },
-      sortHousingList() {
-        this.housingSortOrder = !this.housingSortOrder;
-        this.listItems.sort((a, b) => {
-        return this.housingSortOrder ? a.median_home_value - b.median_home_value : b.median_home_value - a.median_home_value;
-        });
-      },
-      sortCrimeList() {
-        this.crimeSortOrder = !this.crimeSortOrder;
-        this.listItems.sort((a, b) => {
-        return this.crimeSortOrder ? a.crime_rate - b.crime_rate : b.crime_rate - a.crime_rate;
-        });
-      },
-      sortPoliticsList() {
-        // Compares the political affiliation of two states (a and b) and returns the following order
-        this.listItems.sort((a, b) => {
-          // If the political affiliation of state 'a' is greater than (later in alphabetical order) that of state 'b', return 1.
-          if (a.political_affiliation > b.political_affiliation) return 1;
-          // If the political affiliation of state 'a' is less than (earlier in alphabetical order) that of state 'b', return -1.
-          if (a.political_affiliation < b.political_affiliation) return -1;
-          // If the political affiliation of both states is the same, return 0.
-          return 0;
-        });
-      },
+    },
+    addSelectedStates(listName) {
+      // clear the list
+      this[listName] = [];
+      // loop through the selected states and add them to list
+      for (const state of this.selectedStates) {
+        this[listName].push(state.state_name);
+      }
+      console.log(this[listName]);
+      alert(`You have updated your ${listName.split("List")[0]} favorites to the following: ${this[listName]}.`)
+      // Store the list to localStorage
+      localStorage.setItem(listName, JSON.stringify(this[listName]));
+    },
+    // Add/remove state from selectedStates array based on checkbox value
+    addItem(listName, state) {
+      const index = this.selectedStates.indexOf(state);
+      // Add the state to the selectedStates array if it is not in the array already
+      if (index === -1) { // -1 means that 'index' is not present in the array
+        this.selectedStates.push(state);
+      // Remove the state from the selectedStates array if it is in the array
+      } else {
+        this.selectedStates.splice(index, 1);
+      }
+    },
+    sortTaxList() {
+      // Toggle the value of `taxSortOrder`
+      this.taxSortOrder = !this.taxSortOrder;
+      // Sort the `listItems` array based on the value of `taxSortOrder`
+      // If `taxSortOrder` is `false`, sort in descending order by tax rate
+      this.listItems.sort((a, b) => { //comparison function returns the difference between the tax rate of two items (a and b).
+      return this.taxSortOrder ? a.tax_rate - b.tax_rate : b.tax_rate - a.tax_rate;
+      });
+    },
+    sortHousingList() {
+      this.housingSortOrder = !this.housingSortOrder;
+      this.listItems.sort((a, b) => {
+      return this.housingSortOrder ? a.median_home_value - b.median_home_value : b.median_home_value - a.median_home_value;
+      });
+    },
+    sortCrimeList() {
+      this.crimeSortOrder = !this.crimeSortOrder;
+      this.listItems.sort((a, b) => {
+      return this.crimeSortOrder ? a.crime_rate - b.crime_rate : b.crime_rate - a.crime_rate;
+      });
+    },
+    sortPoliticsList() {
+      // Compares the political affiliation of two states (a and b) and returns the following order
+      this.listItems.sort((a, b) => {
+        // If the political affiliation of state 'a' is greater than (later in alphabetical order) that of state 'b', return 1.
+        if (a.political_affiliation > b.political_affiliation) return 1;
+        // If the political affiliation of state 'a' is less than (earlier in alphabetical order) that of state 'b', return -1.
+        if (a.political_affiliation < b.political_affiliation) return -1;
+        // If the political affiliation of both states is the same, return 0.
+        return 0;
+      });
+    },
+    downloadPDF() {
+      let doc = new jsPDF();
+      let favoritesList = JSON.parse(localStorage.getItem("favoritesList"));
+      let header = ["Weighted Rank", "State", "Times Saved"];
+      let data = [];
+      favoritesList.forEach(function(state, index) {
+        let timesSaved = (taxList.includes(state.state_name) ? 1 : 0) + (politicsList.includes(state.state_name) ? 1 : 0) 
+        + (housingList.includes(state.state_name) ? 1 : 0) + (crimeList.includes(state.state_name) ? 1 : 0);
+        data.push([index + 1, state.state_name, timesSaved]);
+      });
+      doc.autoTable({
+        head: [header],
+        body: data,
+        startY: 20
+      });
+      doc.save("favoritesList.pdf");
+      alert('Your favorites have been downloaded to the "Downloads" folder on your device.')
+    }
   },
   computed: {
     // Returns a sorted version of the `listItems` array
@@ -122,7 +140,5 @@ new Vue({
       // Sort the `result` array in descending order by the value of `count`
       return result.sort((a, b) => b.count - a.count);
     }
-    }
   }
-)
-
+})
