@@ -95,22 +95,28 @@ new Vue({
       });
     },
     downloadPDF() {
-      let doc = new jsPDF();
-      let favoritesList = JSON.parse(localStorage.getItem("favoritesList"));
-      let header = ["Weighted Rank", "State", "Times Saved"];
-      let data = [];
-      favoritesList.forEach(function(state, index) {
-        let timesSaved = (taxList.includes(state.state_name) ? 1 : 0) + (politicsList.includes(state.state_name) ? 1 : 0) 
-        + (housingList.includes(state.state_name) ? 1 : 0) + (crimeList.includes(state.state_name) ? 1 : 0);
-        data.push([index + 1, state.state_name, timesSaved]);
-      });
-      doc.autoTable({
-        head: [header],
-        body: data,
-        startY: 20
-      });
-      doc.save("favoritesList.pdf");
-      alert('Your favorites have been downloaded to the "Downloads" folder on your device.')
+      try {
+        const doc = new jsPDF();
+        const favoritesList = this.favoritesList;
+        // JSON.parse(localStorage.getItem("favoritesList"));
+        const header = ["Weighted Rank", "State", "Times Saved"];
+        const data = [];
+        favoritesList.forEach(function(state, index) {
+          const timesSaved = state.count;
+          // (taxList.includes(state.state_name) ? 1 : 0) + (politicsList.includes(state.state_name) ? 1 : 0) 
+          // + (housingList.includes(state.state_name) ? 1 : 0) + (crimeList.includes(state.state_name) ? 1 : 0);
+          data.push([index + 1, state.state_name, timesSaved]);
+        });
+        doc.autoTable({
+          head: [header],
+          body: data,
+          startY: 20
+        });
+        doc.save("favoritesList.pdf");
+        alert('Your favorites have been downloaded to the "Downloads" folder on your device.')
+      } catch (error) {
+        console.error(error);
+      }
     }
   },
   computed: {
