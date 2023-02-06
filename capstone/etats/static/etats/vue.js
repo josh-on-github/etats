@@ -119,7 +119,6 @@ new Vue({
           doc.text(headerXPositions[2], 30 + (index * 10), dataItem[2].toString());
         });
         doc.save("favoritestates.pdf");
-        alert('Your favorites have been downloaded.')
       } catch (error) {
         console.error(error);
       }
