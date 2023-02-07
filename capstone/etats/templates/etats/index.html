@@ -17,8 +17,6 @@
     <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <!-- <script src="path/to/jspdf.min.js"></script> -->
-
     <!-- <link rel="stylesheet" href="{% static 'static/styles.css' %}"> -->
     <title>{% block title %}états.{% endblock %}</title>
 </head>
@@ -27,60 +25,33 @@
     <img style="width: 100%;" src="{% static 'etats/gray-fam-leaving.jpg' %}" alt="Father travelling with kids">
 
     <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link{% block home %} active" aria-current="page"{% endblock %} href="{% url 'etats:index' %}">State Summary</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link{% block taxes %}"{% endblock %} href="{% url 'etats:taxes' %}">Taxes</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link{% block politics %}"{% endblock %} href="{% url 'etats:politics' %}">Politics</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link{% block housing %}"{% endblock %} href="{% url 'etats:housing' %}">Housing</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link{% block crime %}"{% endblock %} href="{% url 'etats:crime' %}">Crime</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link{% block weighted %}"{% endblock %} href="{% url 'etats:weighted' %}">Favorites</a>
-        </li>
-      </ul>
+      <li class="nav-item">
+        <a class="nav-link{% block index %} active" aria-current="page"{% endblock %} href="{% url 'etats:index' %}">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link{% block taxes %}"{% endblock %} href="{% url 'etats:taxes' %}">Taxes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link{% block politics %}"{% endblock %} href="{% url 'etats:politics' %}">Politics</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link{% block housing %}"{% endblock %} href="{% url 'etats:housing' %}">Housing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link{% block crime %}"{% endblock %} href="{% url 'etats:crime' %}">Crime</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link{% block weighted %}"{% endblock %} href="{% url 'etats:weighted' %}">Favorites</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link{% block home %}"{% endblock %} href="{% url 'etats:summary' %}">State Summary</a>
+      </li>
+    </ul>
 
-      {% block input %}
-      <div id="app">
-        <form @submit.prevent="onSubmit">
-          <select v-model="userItem">
-            <option value="">Select a State</option>
-            <option v-for="state in listItems" :value="state.state_name">[[ state.state_name ]]</option>
-          </select>
-          <input type="submit" value="Search"><br><br>
-        </form>
-
-        <template v-if="userItem">
-          <table v-show="active">
-            <tr>
-                <th>State</th>
-                <th>Effective Tax Burden</th>
-                <th>Political Affiliation</th>
-                <th>Median Home Value</th>
-                <th>Crime Rate (per 100,000)</th>
-            </tr>
-            <tr v-for="state in listItems" v-if="state.state_name === userItem">
-                <td>[[ state.state_name ]]</td>
-                <td>[[ state.tax_rate ]]%</td>
-                <td>[[ state.political_affiliation ]]</td>
-                <td>$[[ state.median_home_value ]]</td>
-                <td>[[ state.crime_rate ]]</td>
-            </tr>
-          </table>
-        </template>        
-      </div>
-      {% endblock %}
-      {% block for %}
-        <!-- {% for state in state_object %}
-        {{ state }}<br><br>
-        {% endfor %} -->
-      {% endblock %}<br>
+    {% block input %}
+    Welcome to états.
+    The State Travel Ranker
+    {% endblock %}
+    {% block for %}{% endblock %}<br>
 </body>
 </html>

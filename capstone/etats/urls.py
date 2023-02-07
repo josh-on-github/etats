@@ -10,4 +10,5 @@ urlpatterns = [
     path('housing/', views.housing, name='housing'),
     path('crime/', views.crime, name='crime'),
     path('weighted/', views.weighted, name='weighted'),
+    path('summary/', views.summary, name='summary'),
 ]
