@@ -1,0 +1,34 @@
+{% extends 'etats/index.html' %}
+
+{% block title %}Taxes{% endblock %}
+
+{% block index %}"{% endblock %}
+{% block taxes %} active" aria-current="page"{% endblock %}
+
+{% block instructions %}
+<p>Use the tabs to navigate between categories.</p>
+<p>Use the checkboxes to select states and the add button to save them to your favorites.</p>
+<p>You can sort this list by clicking "Effective Tax Burden."</p>
+<p>Once you have reviewed the categories and saved your favorites, you can see your chosen states in the favorites tab.</p>
+{% endblock %}
+
+{% block for %}
+<div id="app">
+    <table>
+        <tr>
+            <th>Select</th>
+            <th>Rank</th>
+            <th>State</th>
+            <th @click="sortTaxList()">Effective Tax Burden</th>
+        </tr>
+        <tr v-for="(state, index) in listItems">
+            <td><input type="checkbox" v-model="selectedStates" :value="state"></td>
+            <td>[[ state.tax_rank ]]</td>
+            <td>[[ state.state_name ]]</td>
+            <td>[[ state.tax_rate ]]%</td>
+        </tr>
+    </table>
+    <button @click="addSelectedStates('taxList')">Add Selected States</button>
+</div>
+{% endblock %}
+

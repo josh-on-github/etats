@@ -1,0 +1,32 @@
+{% extends 'etats/index.html' %}
+
+{% block title %}Favorites{% endblock %}
+
+{% block index %}"{% endblock %}
+{% block weighted %} active" aria-current="page"{% endblock %}
+
+{% block instructions %}
+<p>Use the tabs to navigate between categories.</p>
+<p>The list below displays your saved states, ordered by the number of categories where the state was saved.</p>
+<p>The list is further ordered alphabetically.</p>
+<p>You may download this list by clicking on the "Download as PDF" button.</p>
+<p>If you would like to see all categories for an individual state, navigate to the "State Summary" tab.</p>
+{% endblock %}
+
+{% block for %}
+<div id="app">
+    <table>
+        <tr>
+            <th>Weighted Rank</th>
+            <th>State</th>
+            <th>Times Saved</th>
+        </tr>
+        <tr v-for="(state, index) in favoritesList">
+            <td>[[ index + 1 ]]</td>
+            <td>[[ state.state_name ]]</td>
+            <td>[[ state.count ]]</td>
+        </tr>
+    </table>
+    <button @click="downloadPDF">Download as PDF</button>
+</div>
+{% endblock %}

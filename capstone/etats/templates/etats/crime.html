@@ -1,0 +1,33 @@
+{% extends 'etats/index.html' %}
+
+{% block title %}Crime{% endblock %}
+
+{% block home %}"{% endblock %}
+{% block crime %} active" aria-current="page"{% endblock %}
+
+{% block instructions %}
+<p>Use the tabs to navigate between categories.</p>
+<p>Use the checkboxes to select states and the add button to save them to your favorites.</p>
+<p>You can sort this list by clicking "Crime Rate (per 100,000)."</p>
+<p>Once you have reviewed the categories and saved your favorites, you can see your chosen states in the favorites tab.</p>
+{% endblock %}
+
+{% block for %}
+<div id="app">
+    <table>
+        <tr>
+            <th>Select</th>
+            <th>Rank</th>
+            <th>State</th>
+            <th @click="sortCrimeList()">Crime Rate (per 100,000)</th>
+        </tr>
+        <tr v-for="(state, index) in listItems">
+            <td><input type="checkbox" v-model="selectedStates" :value="state"></td>
+            <td>[[ state.crime_rank ]]</td>
+            <td>[[ state.state_name ]]</td>
+            <td>[[ state.crime_rate ]]</td>
+        </tr>
+    </table>
+    <button @click="addSelectedStates('crimeList')">Add Selected States</button>
+</div>
+{% endblock %}
