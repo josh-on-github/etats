@@ -5,7 +5,12 @@
 {% block index %}"{% endblock %}
 {% block summary %} active" aria-current="page"{% endblock %}
 
-{% block input %}
+{% block instructions %}
+<p>Use the tabs to navigate between categories.</p>
+<p>Here you may search all categories for individual states.</p>
+{% endblock %}
+
+{% block for %}
 <div id="app">
   <form @submit.prevent="onSubmit">
     <select v-model="userItem">
@@ -34,6 +39,4 @@
     </table>
   </template>        
 </div>
-{% endblock %}
-{% block for %}
 {% endblock %}
