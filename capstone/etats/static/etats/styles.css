@@ -34,7 +34,7 @@ body {
   
 img {
     width: 100%;
-    margin-top: 100px;
+    margin-top: 120px;
 }
 
 .nav-tabs {
@@ -67,17 +67,14 @@ img {
     border-color: #eeeeee #eeeeee #dddddd;
 }
 
+.nav-tabs > li > a:hover {
+    background-color: rgb(218, 215, 13);
+}
+
 .nav-tabs > .active > a,
 .nav-tabs > .active > a:hover,
 .nav-tabs > .active > a:focus {
     color: #555555;
-    background-color: #fff;
+    /* border: none; */
     border: 1px solid #ddd;
-}
-
-.image-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-}
+}  
