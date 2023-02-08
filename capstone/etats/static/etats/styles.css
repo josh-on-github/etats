@@ -1,0 +1,12 @@
+body {
+    background-color: #f5f5f5;
+  }
+  
+  h1, h3, a, ul.nav-tabs {
+    color: #333;
+  }
+  
+  img {
+    filter: grayscale(100%);
+  }
+  
