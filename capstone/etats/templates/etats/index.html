@@ -17,13 +17,13 @@
     <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <link rel="stylesheet" href="{% static 'static/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'etats/styles.css' %}">
     <title>{% block title %}états.{% endblock %}</title>
 </head>
 <body>
-    <h1><strong><em>états.</em></strong></h1>
-    <img style="width: 100%;" src="{% static 'etats/gray-fam-leaving.jpg' %}" alt="Father travelling with kids">
-
+    <h1><strong>Welcome to <em>états.</em></strong></h1>
+    <h2><strong>The State Travel Ranker</strong></h2>
+    
     <ul class="nav nav-tabs">
       <li class="nav-item">
         <a class="nav-link{% block index %} active" aria-current="page"{% endblock %} href="{% url 'etats:index' %}">About</a>
@@ -48,6 +48,8 @@
       </li>
     </ul>
 
+    <img style="width: 100%;" src="{% static 'etats/gray-fam-leaving.jpg' %}" alt="Father travelling with kids">
+    
     {% block instructions %}
     <h3>Welcome to <em>états.</em></h3>
     <h4>The State Travel Ranker</h4>
