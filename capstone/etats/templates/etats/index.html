@@ -21,9 +21,9 @@
     <title>{% block title %}états.{% endblock %}</title>
 </head>
 <body>
-    <h1><strong>Welcome to <em>états.</em></strong></h1>
+  <div class="header">
+    <h1><strong><em>états.</em></strong></h1>
     <h2><strong>The State Travel Ranker</strong></h2>
-    
     <ul class="nav nav-tabs">
       <li class="nav-item">
         <a class="nav-link{% block index %} active" aria-current="page"{% endblock %} href="{% url 'etats:index' %}">About</a>
@@ -47,8 +47,9 @@
         <a class="nav-link{% block home %}"{% endblock %} href="{% url 'etats:summary' %}">State Summary</a>
       </li>
     </ul>
-
-    <img style="width: 100%;" src="{% static 'etats/gray-fam-leaving.jpg' %}" alt="Father travelling with kids">
+  </div>
+  
+  <img style="width: 100%;" src="{% static 'etats/gray-fam-leaving.jpg' %}" alt="Father travelling with kids">
     
     {% block instructions %}
     <p>This website allows you to review states for potential travel or relocation based upon the following categories:</p>
