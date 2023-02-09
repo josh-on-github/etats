@@ -72,11 +72,17 @@ body {
 .nav-tabs > .active > a:focus {
     color: #555555;
     border: none;
-    /* border: 1px solid #ddd; */
 }
 
 .categories {
     margin-top: 34vh;
+}
+
+.site-use {
+    text-align: center;
+    background-color: #333;
+    color:  rgb(192, 191, 191);
+    padding: 1vw;
 }
 
 .taxes,
@@ -93,14 +99,13 @@ body {
 .politics, .crime {
     background-color: #333;
     color: rgb(192, 191, 191);
-    padding-left: 3vw;
+    padding-left: 5vw;
 }
 
 
 .taxes-img, .politics-img, .housing-img, .crime-img {
     background-size: contain;
     background-repeat: no-repeat;
-    /* border-radius: 50%; */
     height: 40vh;
     width: 33vw;
     display: flex;
