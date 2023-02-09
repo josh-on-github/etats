@@ -91,6 +91,12 @@ body {
 } */
 
 .taxes {
+    display: flex;
+    flex-direction: row;
+    margin-top: 34vh;
+}
+
+.taxes-img {
     background-image: url('tax_burden.jpg');
     background-size: contain;
     background-repeat: no-repeat;
@@ -101,12 +107,12 @@ body {
     display: flex;
     align-items: center;
     float: left;
-    margin-top: 34vh;
+    /* margin-top: 34vh; */
 }
 
-/* .taxes-list {
+.taxes-list {
     
-} */
+}
 
 .politics {
     background-image: url('politics.jpg');
