@@ -86,23 +86,23 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100vw;
-    padding: 1%;
 }
 
 .politics, .crime {
     background-color: #333;
     color: rgb(192, 191, 191);
+    padding-left: 3vw;
 }
 
 
 .taxes-img, .politics-img, .housing-img, .crime-img {
     background-size: contain;
     background-repeat: no-repeat;
-    border-radius: 50%;
-    height: 33vh;
-    width: 25vw;
+    /* border-radius: 50%; */
+    height: 40vh;
+    width: 33vw;
     display: flex;
 }
 
