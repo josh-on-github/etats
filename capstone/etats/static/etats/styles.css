@@ -75,6 +75,10 @@ body {
     /* border: 1px solid #ddd; */
 }
 
+.categories {
+    margin-top: 34vh;
+}
+
 .taxes,
 .politics,
 .housing,
@@ -84,11 +88,14 @@ body {
     align-items: center;
     justify-content: space-around;
     width: 100vw;
+    padding: 1%;
 }
 
-/* .taxes {
-    margin-top: 34vh;
-} */
+.politics, .crime {
+    background-color: #333;
+    color: rgb(192, 191, 191);
+}
+
 
 .taxes-img {
     background-size: contain;
@@ -110,7 +117,6 @@ body {
     align-items: center;
     justify-content: space-around;
     width: 100vw;
-    margin-top: 67vh;
 }
 
 .politics-list {

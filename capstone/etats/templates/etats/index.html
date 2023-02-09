@@ -48,15 +48,14 @@
       </li>
     </ul>
   </div>
-    
-    {% block instructions %}
-    <p>This website allows you to review states for potential travel or relocation based upon the following categories:</p>
-
+  {% block instructions %}
+  <p>This website allows you to review states for potential travel or relocation based upon the following categories:</p>
+  <div class="categories">
     <div class="taxes">
       <img class="taxes-img" src="{% static 'etats/tax_burden.jpg' %}" alt="Man hanging from cliff with ball and chain labelled tax">
       <div class="taxes-list">
         <h2>Taxes</h2>
-        <h4>This category takes into account a state's effective tax burden</h4>
+        <h4>Effective tax burden as a measure of the following:</h4>
         <ul>
           <li>Income Tax</li>
           <li>Property Tax</li>
@@ -68,7 +67,7 @@
     <div class="politics">
       <div class="politics-list">
         <h2>Politics</h2>
-        <h4>This category takes into account a state's political affiliation</h4>
+        <h4>Political affiliation as a measure of the following:</h4>
         <ul>
           <li>Legislative majority paired with governor control</li>
           <li>Party affiliation of each state's governor, senate, and house</li>
@@ -81,13 +80,13 @@
       <img class="housing-img" src="{% static 'etats/housing.jpg' %}" alt="Out of focus house with in-focus for sale sign">
       <div class="housing-list">
         <h2>Housing</h2>
-        <h4>This category takes into account a state's median (most frequently occurring) home value</h4>
+        <h4>A state's median (most-frequently-occurring) home value</h4>
       </div>
     </div>
     <div class="crime">
       <div class="crime-list">
         <h2>Crime</h2>
-        <h4>This category takes into account a state's crime rate</h4>
+        <h4>Crime rate as a measure of the following:</h4>
         <ul>
           <li>Violent Crime</li>
             <ul>
@@ -107,6 +106,7 @@
       </div>
       <img class="crime-img" src="{% static 'etats/crime.jpg' %}" alt="Crime scene tape">
     </div>
+  </div>
 
     <p>Use the tabs to navigate between categories.</p>
     <p>Once you have reviewed the categories and saved your favorites, you can see your chosen states in the favorites tab.</p>
