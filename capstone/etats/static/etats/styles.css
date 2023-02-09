@@ -47,7 +47,7 @@ body {
 
 .nav-tabs > li {
     float: left;
-    margin-bottom: -1px;    /*check this later to see if it is what is causing the white line under the tabs in the header*/
+    margin-bottom: -1px;
 }
 
 .nav-tabs > li > a {
@@ -75,83 +75,82 @@ body {
     /* border: 1px solid #ddd; */
 }
 
-/* .taxes {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 33vh;
-    width: 100vw;
-    padding-top: 10px;
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-} */
-
-.taxes {
+.taxes,
+.politics,
+.housing,
+.crime {
     display: flex;
     flex-direction: row;
-    margin-top: 34vh;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
 }
 
+/* .taxes {
+    margin-top: 34vh;
+} */
+
 .taxes-img {
-    background-image: url('tax_burden.jpg');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: left;
     border-radius: 50%;
-    padding-left: 80px;
     height: 33vh;
+    width: 25vw;
     display: flex;
-    align-items: center;
-    float: left;
-    /* margin-top: 34vh; */
 }
 
 .taxes-list {
-    
+    width: 50%;
+    text-align: left;
 }
 
 .politics {
-    background-image: url('politics.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
-    border-radius: 50%;
-    padding-right: 80px;
-    height: 33vh;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    float: right;
+    justify-content: space-around;
+    width: 100vw;
     margin-top: 67vh;
 }
 
-.housing {
-    background-image: url('housing.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left;
-    border-radius: 50%;
-    padding-left: 80px;
-    height: 33vh;
-    display: flex;
-    align-items: center;
-    float: left;
-    margin-top: 100vh;
+.politics-list {
+    width: 50%;
+    text-align: left;
 }
 
-.crime {
-    background-image: url('crime.jpg');
+.politics-img {
+        background-size: contain;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        height: 33vh;
+        width: 25vw;
+        display: flex;
+}
+    
+.housing-img {
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: right;
     border-radius: 50%;
-    padding-right: 80px;
     height: 33vh;
+    width: 25vw;
     display: flex;
-    align-items: center;
-    float: right;
-    margin-top: 133vh;
+}
+
+.housing-list {
+    width: 50%;
+    text-align: left;
+}
+
+.crime-list {
+    width: 50%;
+    text-align: left;
+}
+
+.crime-img {
+        background-size: contain;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        height: 33vh;
+        width: 25vw;
+        display: flex;
 }
