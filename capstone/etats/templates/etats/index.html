@@ -49,8 +49,12 @@
     </ul>
   </div>
   {% block instructions %}
-  <p>This website allows you to review states for potential travel or relocation based upon the following categories:</p>
   <div class="categories">
+    <div style="justify-content: center;">
+      <p>This website allows you to review states for potential travel or relocation based upon the following categories:</p>
+      <p>Use the tabs to navigate between categories.</p>
+      <p>Once you have reviewed the categories and saved your favorites, you can see your chosen states in the favorites tab.</p>
+    </div>
     <div class="taxes">
       <img class="taxes-img" src="{% static 'etats/tax_burden.jpg' %}" alt="Man hanging from cliff with ball and chain labelled tax">
       <div class="taxes-list">
@@ -107,10 +111,7 @@
       <img class="crime-img" src="{% static 'etats/crime.jpg' %}" alt="Crime scene tape">
     </div>
   </div>
-
-    <p>Use the tabs to navigate between categories.</p>
-    <p>Once you have reviewed the categories and saved your favorites, you can see your chosen states in the favorites tab.</p>
-    {% endblock %}
-    {% block for %}{% endblock %}<br>
+  {% endblock %}
+  {% block for %}{% endblock %}<br>
 </body>
 </html>

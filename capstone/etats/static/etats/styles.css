@@ -97,7 +97,7 @@ body {
 }
 
 
-.taxes-img {
+.taxes-img, .politics-img, .housing-img, .crime-img {
     background-size: contain;
     background-repeat: no-repeat;
     border-radius: 50%;
@@ -106,57 +106,7 @@ body {
     display: flex;
 }
 
-.taxes-list {
+.taxes-list, .politics-list, .housing-list, .crime-list {
     width: 50%;
     text-align: left;
-}
-
-.politics {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    width: 100vw;
-}
-
-.politics-list {
-    width: 50%;
-    text-align: left;
-}
-
-.politics-img {
-        background-size: contain;
-        background-repeat: no-repeat;
-        border-radius: 50%;
-        height: 33vh;
-        width: 25vw;
-        display: flex;
-}
-    
-.housing-img {
-    background-size: contain;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    height: 33vh;
-    width: 25vw;
-    display: flex;
-}
-
-.housing-list {
-    width: 50%;
-    text-align: left;
-}
-
-.crime-list {
-    width: 50%;
-    text-align: left;
-}
-
-.crime-img {
-        background-size: contain;
-        background-repeat: no-repeat;
-        border-radius: 50%;
-        height: 33vh;
-        width: 25vw;
-        display: flex;
 }
