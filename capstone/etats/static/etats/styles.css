@@ -79,14 +79,6 @@ body {
     margin-top: 34vh;
 }
 
-/* .site-use {
-    text-align: center;
-    background-color: #333;
-    color:  rgb(192, 191, 191);
-    padding: 1vw;
-    width: 100vw;
-} */
-
 .taxes,
 .politics,
 .housing,
@@ -117,4 +109,45 @@ body {
 .taxes-list, .politics-list, .housing-list, .crime-list, .howto-list {
     width: 50%;
     text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+th {
+    background-color: #dddddd;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+select, input[type="submit"] {
+    padding: 8px;
+    margin-top: 16px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #dddddd;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    align-items: center;
+}
+
+button:hover {
+    background-color:  rgb(218, 215, 13);
 }
