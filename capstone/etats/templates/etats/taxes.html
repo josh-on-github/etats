@@ -1,5 +1,7 @@
 {% extends 'etats/index.html' %}
 
+{% load static %}
+
 {% block title %}Taxes{% endblock %}
 
 {% block index %}"{% endblock %}
@@ -8,9 +10,15 @@
 {% block instructions %}
 <div class="categories">
     <div class="howto">
-        <p>Use the tabs to navigate between categories</p>
-        <p>Select states with checkboxes and save them to Favorites with the Add button</p>
-        <p>Sort by selecting Effective Tax Burden</p>
+        <div class="howto-list">
+            <h2>How to Use the Taxes Page</h2>
+              <ul>
+                  <li>Sort by selecting Effective Tax Burden</li>
+                  <li>Use the tabs to navigate between categories</li>
+                  <li>Select states with checkboxes and save them to Favorites with the Add button</li>
+              </ul>
+        </div>
+        <img class="howto-img" src="{% static 'etats/you_are_here.jpeg' %}" alt="You are here in neon lights">
     </div>
 </div>
 {% endblock %}
