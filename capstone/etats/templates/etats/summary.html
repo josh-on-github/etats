@@ -29,8 +29,8 @@
       <option value="">Select a State</option>
       <option v-for="state in listItems" :value="state.state_name">[[ state.state_name ]]</option>
     </select>
-    <input type="submit" value="Search"><br><br>
-  </form>
+    <input class="btn btn-primary" type="submit" value="Search">
+  </form><br>
   <template v-if="userItem">
     <table v-show="active">
       <tr>
