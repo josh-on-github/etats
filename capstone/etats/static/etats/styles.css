@@ -105,7 +105,7 @@ body {
 }
 
 
-.taxes-img, .politics-img, .housing-img, .crime-img {
+.taxes-img, .politics-img, .housing-img, .crime-img, .use-img {
     background-size: contain;
     background-repeat: no-repeat;
     height: 40vh;
@@ -113,7 +113,7 @@ body {
     display: flex;
 }
 
-.taxes-list, .politics-list, .housing-list, .crime-list {
+.taxes-list, .politics-list, .housing-list, .crime-list, .use-list {
     width: 50%;
     text-align: left;
 }
