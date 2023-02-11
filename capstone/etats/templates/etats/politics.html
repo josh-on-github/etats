@@ -38,5 +38,12 @@
         </tr>
     </table><br>
     <button class="btn btn-primary" @click="addSelectedStates('politicsList')">Add Selected States</button><br><br>
+    <div v-if="showAlert" class="alert-overlay">
+        <div class="alert-box">
+            <p v-if="list && list.length > 0">You have updated your [[ listName.split("List")[0] ]] favorites to the following:<br><br>[[ list.join(", ") ]].</p>
+            <p v-else>You have not selected any states to add to favorites.</p>
+          <button @click="closeAlert">Close</button>
+        </div>
+    </div>
 </div>
 {% endblock %}
