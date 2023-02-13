@@ -12,20 +12,20 @@ The problem that my project solves is to streamline the process of choosing loca
 - urlopen
 
 ## Major Features
-- About Us
-- Contact Us
-- User Signup/Login
-- Password Reset
-- State Effective Tax Burden
-- State Violent/Property Crime Rate
-- State Median Housing Value/Price 
-- State Political Affiliation
-- Weighted State Ranking
+- About Page
+<!-- - User Signup/Login -->
+<!-- - Password Reset -->
+- State Effective Tax Burden Page
+- State Political Affiliation Page
+- State Median Housing Value/Price Page
+- State Violent/Property Crime Rate Page
+- Weighted State Ranking Page
+- Contact Page
 
 ### Essential Features
-- User can create an account, login, and change password
+<!-- - User can create an account, login, and change password -->
 - User can search states and save rankings by topic (tax, crime, housing, politics) and download/upload to localStorage
-- User can create a favorites list to download/upload weighted state rankings to localStorage
+- User can create a favorites list to download to their device
 
 ### Non-Essential Features
 - State data updates on a specified time schedule
