@@ -8,7 +8,7 @@ class State(models.Model):
     median_home_value = models.SmallIntegerField(null=True)
     crime_rate = models.DecimalField(max_digits=7, decimal_places=3, null=True)
     crime_rank = models.SmallIntegerField(null=True)
-    tourism_site = models.CharField(max_length=50)
+    tourism_site = models.CharField(max_length=50, null=True)
 
     def __str__(self):
         return f'''
