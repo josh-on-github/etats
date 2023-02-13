@@ -39,6 +39,7 @@
           <th>Political Affiliation</th>
           <th>Median Home Value</th>
           <th>Crime Rate (per 100,000)</th>
+          <th>Tourism Site</th>
       </tr>
       <tr v-for="state in listItems" v-if="state.state_name === userItem">
           <td>[[ state.state_name ]]</td>
@@ -46,6 +47,7 @@
           <td>[[ state.political_affiliation ]]</td>
           <td>$[[ state.median_home_value ]]</td>
           <td>[[ state.crime_rate ]]</td>
+          <td>[[ state.tourism_site ]]</td>
       </tr>
     </table>
   </template>        

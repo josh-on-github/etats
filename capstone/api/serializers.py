@@ -12,5 +12,6 @@ class ApiSerializer(serializers.ModelSerializer):
             'political_affiliation',
             'median_home_value',
             'crime_rate',
-            'crime_rank', 
+            'crime_rank',
+            'tourism_site',
         )

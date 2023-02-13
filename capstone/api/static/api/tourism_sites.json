@@ -1,0 +1,202 @@
+[
+    {
+      "state": "Alabama",
+      "tourism_site": "https://www.alabama.travel/"
+    },
+    {
+      "state": "Alaska",
+      "tourism_site": "https://www.travelalaska.com/"
+    },
+    {
+      "state": "Arizona",
+      "tourism_site": "https://www.arizonaguide.com/"
+    },
+    {
+      "state": "Arkansas",
+      "tourism_site": "https://www.arkansas.com/"
+    },
+    {
+      "state": "California",
+      "tourism_site": "https://www.visitcalifornia.com/"
+    },
+    {
+      "state": "Colorado",
+      "tourism_site": "https://www.colorado.com/"
+    },
+    {
+      "state": "Connecticut",
+      "tourism_site": "https://www.ctvisit.com/"
+    },
+    {
+      "state": "Delaware",
+      "tourism_site": "https://www.visitdelaware.com/"
+    },
+    {
+      "state": "Florida",
+      "tourism_site": "https://www.visitflorida.com/"
+    },
+    {
+      "state": "Georgia",
+      "tourism_site": "https://www.exploregeorgia.org/"
+    },
+    {
+      "state": "Hawaii",
+      "tourism_site": "https://www.gohawaii.com/"
+    },
+    {
+      "state": "Idaho",
+      "tourism_site": "https://www.visitidaho.org/"
+    },
+    {
+      "state": "Illinois",
+      "tourism_site": "https://www.enjoyillinois.com/"
+    },
+    {
+      "state": "Indiana",
+      "tourism_site": "https://www.enjoyindiana.com/"
+    },
+    {
+      "state": "Iowa",
+      "tourism_site": "https://www.traveliowa.com/"
+    },
+    {
+      "state": "Kansas",
+      "tourism_site": "https://www.travelks.com/"
+    },
+    {
+      "state": "Kentucky",
+      "tourism_site": "https://www.kentuckytourism.com/"
+    },
+    {
+      "state": "Louisiana",
+      "tourism_site": "https://www.louisianatravel.com/"
+    },
+    {
+      "state": "Maine",
+      "tourism_site": "https://www.visitmaine.com/"
+    },
+    {
+      "state": "Maryland",
+      "tourism_site": "https://www.visitmaryland.org/"
+    },
+    {
+      "state": "Massachusetts",
+      "tourism_site": "https://www.massvacation.org/"
+    },
+    {
+      "state": "Michigan",
+      "tourism_site": "https://www.michigan.org/"
+    },
+    {
+      "state": "Minnesota",
+      "tourism_site": "https://www.exploreminnesota.com/"
+    },
+    {
+      "state": "Mississippi",
+      "tourism_site": "https://www.visitmississippi.org/"
+    },
+    {
+      "state": "Missouri",
+      "tourism_site": "https://www.visitmo.com/"
+    },
+    {
+      "state": "Montana",
+      "tourism_site": "https://www.visitmt.com/"
+    },
+    {
+      "state": "Nebraska",
+      "tourism_site": "https://www.visitnebraska.com/"
+    },
+    {
+      "state": "Nevada",
+      "tourism_site": "https://www.travelnevada.com/"
+    },
+    {
+      "state": "New Hampshire",
+      "tourism_site": "https://www.visitnh.gov/"
+    },
+    {
+      "state": "New Jersey",
+      "tourism_site": "https://www.visitnj.org/"
+    },
+    {
+      "state": "New Mexico",
+      "tourism_site": "https://www.newmexico.org/"
+    },
+    {
+      "state": "New York",
+      "tourism_site": "https://www.iloveny.com/"
+    },
+    {
+      "state": "North Carolina",
+      "tourism_site": "https://www.visitnc.com/"
+    },
+    {
+      "state": "North Dakota",
+      "tourism_site": "https://www.ndtourism.com/"
+    },
+    {
+      "state": "Ohio",
+      "tourism_site": "https://www.ohio.org/"
+    },
+    {
+      "state": "Oklahoma",
+      "tourism_site": "https://www.travelok.com/"
+    },
+    {
+      "state": "Oregon",
+      "tourism_site": "https://traveloregon.com/"
+    },
+    {
+      "state": "Pennsylvania",
+      "tourism_site": "https://www.visitpa.com/"
+    },
+    {
+      "state": "Rhode Island",
+      "tourism_site": "https://www.visitrhodeisland.com/"
+    },
+    {
+      "state": "South Carolina",
+      "tourism_site": "https://discoversouthcarolina.com/"
+    },
+    {
+      "state": "South Dakota",
+      "tourism_site": "https://www.travelsd.com/"
+    },
+    {
+      "state": "Tennessee",
+      "tourism_site": "https://www.tnvacation.com/"
+    },
+    {
+      "state": "Texas",
+      "tourism_site": "https://www.traveltexas.com/"
+    },
+    {
+      "state": "Utah",
+      "tourism_site": "https://www.visitutah.com/"
+    },
+    {
+      "state": "Vermont",
+      "tourism_site": "https://www.vermontvacation.com/"
+    },
+    {
+      "state": "Virginia",
+      "tourism_site": "https://www.virginia.org/"
+    },
+    {
+      "state": "Washington",
+      "tourism_site": "https://www.experiencewa.com/"
+    },
+    {
+      "state": "West Virginia",
+      "tourism_site": "https://www.wvtourism.com/"
+    },
+    {
+      "state": "Wisconsin",
+      "tourism_site": "https://www.travelwisconsin.com/"
+    },
+    {
+      "state": "Wyoming",
+      "tourism_site": "https://www.wyomingtourism.org/"
+    }
+]
