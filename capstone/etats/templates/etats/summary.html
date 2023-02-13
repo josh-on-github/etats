@@ -34,7 +34,7 @@
   <template v-if="userItem">
     <table v-show="active">
       <tr>
-          <th>State</th>
+          <!-- <th>State</th> -->
           <th>Effective Tax Burden</th>
           <th>Political Affiliation</th>
           <th>Median Home Value</th>
@@ -42,7 +42,7 @@
           <th>Tourism Site</th>
       </tr>
       <tr v-for="state in listItems" v-if="state.state_name === userItem">
-          <td>[[ state.state_name ]]</td>
+          <!-- <td>[[ state.state_name ]]</td> -->
           <td>[[ state.tax_rate ]]%</td>
           <td>[[ state.political_affiliation ]]</td>
           <td>$[[ state.median_home_value ]]</td>
