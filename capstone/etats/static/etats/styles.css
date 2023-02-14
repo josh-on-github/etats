@@ -118,8 +118,6 @@ body {
 table {
     border-collapse: collapse;
     width: 100%;
-    /* scroll isn't working
-    overflow-x: auto; */
     margin-top: 1em;
 }
 
@@ -207,7 +205,12 @@ button {
         padding-left: 0vw;
     }
 
-    /* .summary-table {
-        overflow-x: scroll;
-    } */
+    .summary-table {
+        display: flex;
+        flex-direction: column;
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 1em;
+        justify-content: center;
+    }
 }

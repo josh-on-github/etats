@@ -24,7 +24,7 @@
 {% endblock %}
 
 {% block for %}
-<div id="app">
+<div id="app" class="summary-table">
   <form @submit.prevent="onSubmit">
     <select v-model="userItem">
       <option value="">Select a State</option>
