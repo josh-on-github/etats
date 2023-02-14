@@ -12,6 +12,9 @@ new Vue({
     crimeSortOrder: false,
     selectedStates: [], // array to store the selected states from checkboxes
     active: false,
+    showAlert: false,
+    list: [],
+    listName: '',
   },
   delimiters: ['[[',']]'],
   mounted() {
@@ -47,9 +50,14 @@ new Vue({
         this[listName].push(state.state_name);
       }
       console.log(this[listName]);
-      alert(`You have updated your ${listName.split("List")[0]} favorites to the following: ${this[listName]}.`)
+      this.list = this[listName];
+      this.listName = listName;
+      this.showAlert = true;
       // Store the list to localStorage
       localStorage.setItem(listName, JSON.stringify(this[listName]));
+    },
+    closeAlert() {
+      this.showAlert = false;
     },
     // Add/remove state from selectedStates array based on checkbox value
     addItem(listName, state) {

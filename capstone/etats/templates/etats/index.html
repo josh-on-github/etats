@@ -17,13 +17,13 @@
     <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <!-- <link rel="stylesheet" href="{% static 'static/styles.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'etats/styles.css' %}">
     <title>{% block title %}états.{% endblock %}</title>
 </head>
 <body>
+  <div class="header">
     <h1><strong><em>états.</em></strong></h1>
-    <img style="width: 100%;" src="{% static 'etats/gray-fam-leaving.jpg' %}" alt="Father travelling with kids">
-
+    <h2><strong>The State Travel Ranker</strong></h2>
     <ul class="nav nav-tabs">
       <li class="nav-item">
         <a class="nav-link{% block index %} active" aria-current="page"{% endblock %} href="{% url 'etats:index' %}">About</a>
@@ -44,50 +44,80 @@
         <a class="nav-link{% block weighted %}"{% endblock %} href="{% url 'etats:weighted' %}">Favorites</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link{% block home %}"{% endblock %} href="{% url 'etats:summary' %}">State Summary</a>
+        <a class="nav-link{% block summary %}"{% endblock %} href="{% url 'etats:summary' %}">State Summary</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'api:api' %}" target="_blank">API</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://josh-on-github.github.io/" target="_blank">Contact</a>
       </li>
     </ul>
-
-    {% block instructions %}
-    <h3>Welcome to <em>états.</em></h3>
-    <h4>The State Travel Ranker</h4>
-    <p>This website allows you to review states for potential travel or relocation based upon the following categories:</p>
-    <ol>
-      <li>Taxes - This category takes into account a state's effective tax burden, which is a measure of the following:</li>
+  </div>
+  {% block instructions %}
+  <div class="categories">
+    <div class="howto">
+      <img class="howto-img-mobile" src="{% static 'etats/you_are_here.jpeg' %}" alt="You are here in neon lights">
+      <div class="howto-list">
+      <h2>How to Use This Site</h2>
+        <ul>
+          <li>Use the tabs to navigate between categories</li>
+          <li>Review states for potential travel or relocation</li>
+          <li>Save your favorites and download them in PDF format</li>
+          <li>Learn more by visiting the links in the State Summary table</li>
+        </ul>
+      </div>
+      <img class="howto-img" src="{% static 'etats/you_are_here.jpeg' %}" alt="You are here in neon lights">
+    </div>
+    <div class="taxes">
+      <img class="taxes-img" src="{% static 'etats/tax_burden.jpg' %}" alt="Man hanging from cliff with ball and chain labelled tax">
+      <div class="taxes-list">
+        <h2>Taxes (Effective Tax Burden)</h2>
         <ul>
           <li>Income Tax</li>
           <li>Property Tax</li>
           <li>Sales and Excise Taxes</li>
           <li>Local Tax</li>
         </ul>
-      <li>Politics - This category takes into account a state's political affiliation, which is a measure of the following:</li>
+      </div>
+    </div>
+    <div class="politics">
+      <img class="politics-img-mobile" src="{% static 'etats/politics.jpg' %}" alt="Elephant and donkey butt heads">
+      <div class="politics-list">
+        <h2>Politics (Political Affiliation)</h2>
         <ul>
           <li>Legislative majority paired with governor control</li>
           <li>Party affiliation of each state's governor, senate, and house</li>
-          <li>Percentage of adults who identify as a Democrat, Republican, or neither</li>
+          <li>Percentage of adults who identify as Democrat, Republican, or neither</li>
         </ul>
-      <li>Housing - This category takes into account a state's median (most frequently occurring) home value</li>
-      <li>Crime - This category takes into account a state's crime rate, which is a measure of the following:</li>
+      </div>
+      <img class="politics-img" src="{% static 'etats/politics.jpg' %}" alt="Elephant and donkey butt heads">
+    </div>
+    <div class="housing">
+      <img class="housing-img" src="{% static 'etats/housing.jpg' %}" alt="Out of focus house with in-focus for sale sign">
+      <div class="housing-list">
+        <h2>Housing (Median Home Values)</h2>
+      </div>
+    </div>
+    <div class="crime">
+      <img class="crime-img-mobile" src="{% static 'etats/crime.jpg' %}" alt="Crime scene tape">
+      <div class="crime-list">
+        <h2>Crime (Violent/Property Crime Rate)</h2>
         <ul>
-          <li>Violent Crime</li>
-            <ul>
-              <li>Aggravated Assault</li>
-              <li>Robbery</li>
-              <li>Homicide/Manslaughter</li>
-              <li>Rape</li>
-            </ul>
-          <li>Property Crime</li>
-            <ul>
-              <li>Arson</li>
-              <li>Burglary</li>
-              <li>Larceny</li>
-              <li>Motor Vehicle Theft/Damage</li>
-            </ul>
+          <li>Aggravated Assault</li>
+          <li>Robbery</li>
+          <li>Homicide/Manslaughter</li>
+          <li>Rape</li>
+          <li>Arson</li>
+          <li>Burglary</li>
+          <li>Larceny</li>
+          <li>Motor Vehicle Theft/Damage</li>
         </ul>
-    </ol>      
-    <p>Use the tabs to navigate between categories.</p>
-    <p>Once you have reviewed the categories and saved your favorites, you can see your chosen states in the favorites tab.</p>
-    {% endblock %}
-    {% block for %}{% endblock %}<br>
+      </div>
+      <img class="crime-img" src="{% static 'etats/crime.jpg' %}" alt="Crime scene tape">
+    </div>
+  </div>
+  {% endblock %}
+  {% block for %}{% endblock %}<br>
 </body>
 </html>

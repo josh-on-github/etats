@@ -1,15 +1,26 @@
 {% extends 'etats/index.html' %}
 
+{% load static %}
+
 {% block title %}Taxes{% endblock %}
 
 {% block index %}"{% endblock %}
 {% block taxes %} active" aria-current="page"{% endblock %}
 
 {% block instructions %}
-<p>Use the tabs to navigate between categories.</p>
-<p>Use the checkboxes to select states and the add button to save them to your favorites.</p>
-<p>You can sort this list by clicking "Effective Tax Burden."</p>
-<p>Once you have reviewed the categories and saved your favorites, you can see your chosen states in the favorites tab.</p>
+<div class="categories">
+    <div class="howto">
+        <div class="howto-list">
+            <h2>How to Use the Taxes Page</h2>
+              <ul>
+                  <li>Sort the table by clicking Effective Tax Burden</li>
+                  <li>Select states with checkboxes and save them to Favorites with the Add button</li>
+                  <li>Reminder: Use the tabs to navigate between categories</li>
+              </ul>
+        </div>
+        <img class="howto-img" src="{% static 'etats/you_are_here.jpeg' %}" alt="You are here in neon lights">
+    </div>
+</div>
 {% endblock %}
 
 {% block for %}
@@ -28,7 +39,14 @@
             <td>[[ state.tax_rate ]]%</td>
         </tr>
     </table>
-    <button @click="addSelectedStates('taxList')">Add Selected States</button>
+    <button class="btn btn-primary" @click="addSelectedStates('taxList')">Add Selected States</button><br><br>
+    <div v-if="showAlert" class="alert-overlay">
+        <div class="alert-box">
+            <p v-if="list && list.length > 0">You have updated your [[ listName.split("List")[0] ]] favorites to the following:<br><br>[[ list.join(", ") ]].</p>
+            <p v-else>You have not selected any states to add to favorites.</p>
+          <button @click="closeAlert">Close</button>
+        </div>
+    </div>
 </div>
 {% endblock %}
 

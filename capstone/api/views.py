@@ -30,6 +30,10 @@ class StateAPIView(generics.ListAPIView):
 # with open(crime_json, 'r') as file:
 #     crime_list = json.load(file)
 
+# tourism_sites.json = r'api\static\api\tourism_sites.json'
+# with open(tourism_sites_json, 'r') as file:
+#     tourism_sites_list = json.load(file)
+
 
 # def tax_burden(): # Assigns state name, tax rate, and tax rank to model fields
 #     for row in soup_tax.table.contents[5].find_all('tr'):   # loops selected table data in parse tree
@@ -41,6 +45,7 @@ class StateAPIView(generics.ListAPIView):
 #             median_home_value = None,
 #             crime_rate = None,
 #             crime_rank = None,
+#             tourism_site = None,
 #         )
 
 
@@ -57,3 +62,8 @@ class StateAPIView(generics.ListAPIView):
 # def crime():  # Assigns crime rate (violent/property) of states when state names match created object above
 #     for item in crime_list:
 #         State.objects.filter(state_name=item['state']).update(crime_rate=item['rate'])
+
+
+# def tourism_sites():  #Assigns state tourism sites when state names match created object above
+#     for item in tourism_sites_list
+#         State.objects.filter(state_name=item['state']).update(tourism_site=item['tourism_site'])

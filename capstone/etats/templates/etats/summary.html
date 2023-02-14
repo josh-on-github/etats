@@ -1,40 +1,52 @@
 {% extends 'etats/index.html' %}
 
+{% load static %}
+
 {% block title %}State Summary{% endblock %}
 
 {% block index %}"{% endblock %}
 {% block summary %} active" aria-current="page"{% endblock %}
 
 {% block instructions %}
-<p>Use the tabs to navigate between categories.</p>
-<p>Here you may search all categories for individual states.</p>
+<div class="categories">
+  <div class="howto">
+      <div class="howto-list">
+          <h2>How to Use the State Summary Page</h2>
+            <ul>
+              <li>Here you may display all categories for an individual state</li>
+              <li>Visit the tourism links to learn more about the state</li>
+              <li>Reminder:  Use the tabs to navigate between categories</li>
+            </ul>
+      </div>
+      <img class="howto-img" src="{% static 'etats/you_are_here.jpeg' %}" alt="You are here in neon lights">
+  </div>
+</div>
 {% endblock %}
 
 {% block for %}
-<div id="app">
+<div id="app" class="summary-table">
   <form @submit.prevent="onSubmit">
     <select v-model="userItem">
       <option value="">Select a State</option>
       <option v-for="state in listItems" :value="state.state_name">[[ state.state_name ]]</option>
     </select>
-    <input type="submit" value="Search"><br><br>
-  </form>
-
+    <input class="btn btn-primary" type="submit" value="Search">
+  </form><br>
   <template v-if="userItem">
-    <table v-show="active">
+    <table class="summary-table" v-show="active">
       <tr>
-          <th>State</th>
           <th>Effective Tax Burden</th>
           <th>Political Affiliation</th>
           <th>Median Home Value</th>
           <th>Crime Rate (per 100,000)</th>
+          <th>Tourism</th>
       </tr>
       <tr v-for="state in listItems" v-if="state.state_name === userItem">
-          <td>[[ state.state_name ]]</td>
           <td>[[ state.tax_rate ]]%</td>
           <td>[[ state.political_affiliation ]]</td>
           <td>$[[ state.median_home_value ]]</td>
           <td>[[ state.crime_rate ]]</td>
+          <td><a :href="state.tourism_site" target="_blank">[[ state.tourism_site ]]</a></td>
       </tr>
     </table>
   </template>        
