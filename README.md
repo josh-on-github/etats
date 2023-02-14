@@ -44,6 +44,7 @@ The problem that my project solves is to streamline the process of choosing loca
 - `median_home_value` for state median home value
 - `crime_rate` for state violent/property crime rate by number of incidents per 100,000 people
 - `crime_rank` for state rank by `crime_rate`
+- `tourism_site` for a hyperlink to a state's official travel/tourism website
 
 ### Rank Model
 - `weighted_rank` for state rank weighted by number of user matches: <sup>`tax_rate`, `political_affiliation`, `median_home_value`, and `crime_rate`</sup>
