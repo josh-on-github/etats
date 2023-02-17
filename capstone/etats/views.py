@@ -2,7 +2,6 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.template import loader
 from django.urls import reverse
-from .models import Rank
 from api.models import State
 
 
@@ -16,11 +15,6 @@ def summary(request):
                 state_object = State.objects.filter(**{item: form_data[item]})
                 print(state_object)
         context = {'state_object': state_object}
-        return render(request, 'etats/summary.html', context)
-
-    else:
-        rank_list = Rank.objects.all()
-        context = {'rank_list': rank_list}
         return render(request, 'etats/summary.html', context)
 
 
